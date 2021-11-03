@@ -45,4 +45,20 @@ public class PlayerMovement : MonoBehaviour
             rb.MovePosition(rb.position + movement.normalized * (moveSpeed * slowedPercent) * Time.fixedDeltaTime);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            isSlowed = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.layer == 6)
+        {
+            isSlowed = false;
+        }
+    }
 }
