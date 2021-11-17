@@ -14,23 +14,17 @@ public class HouseManager : MonoBehaviour
 
     private void Awake()
     {
-
         foreach(Data_Room room in rooms)
         {
             room.hider.SetActive(true);
 
-            //print(index+" "+room.hider.activeSelf);
-
-
-            //print("Found "+room.front.Length+" front renderers.");
             foreach (SpriteRenderer backwall in room.back)
             {
-                //print(foreground.material.color);
                 backwall.material.color = Color.black;
             }
-
         }
     }
+
     public void Reveal(int selection)
     {
         Data_Room room = rooms[selection];
@@ -51,7 +45,6 @@ public class HouseManager : MonoBehaviour
 
     public void Deactivate(int oldActive)
     {
-        //print("Room " + oldActive + "deactivated.");
         previousRoom = oldActive;
         StartCoroutine("FadeIn");
     }
@@ -74,7 +67,6 @@ public class HouseManager : MonoBehaviour
 
             yield return null;
         }
-        //print("Faded OUT room "+playerInRoom+".");
     }
 
     // TODO: DITTO, POOP BE HERE
@@ -93,7 +85,6 @@ public class HouseManager : MonoBehaviour
             }
             yield return null;
         }
-        //print("Faded IN room "+playerInRoom+".");
     }
 }
 

@@ -1710,11 +1710,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rooms:
-  - front: []
+  - front:
+    - {fileID: 622205257}
     hider: {fileID: 1799211969}
     back:
     - {fileID: 1481071365}
-  - front: []
+  - front:
+    - {fileID: 1767511762}
     hider: {fileID: 503604833}
     back:
     - {fileID: 1405623826}
@@ -2872,7 +2874,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1134597601
 Transform:
   m_ObjectHideFlags: 0
