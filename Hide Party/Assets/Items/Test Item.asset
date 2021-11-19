@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774b489e73f68e549a23bca80865679e, type: 3}
   m_Name: Test Item
   m_EditorClassIdentifier: 
-  name: Bottle
-  icon: {fileID: 0}
+  name: Snacks
+  icon: {fileID: 21300000, guid: b1e533e3ce8265d448296d31c5db2458, type: 3}
