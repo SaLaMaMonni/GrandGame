@@ -1574,7 +1574,7 @@ MonoBehaviour:
   radius: 2
   textMesh: {fileID: 359033276}
   canInteract: 0
-  item: {fileID: 11400000, guid: 1268f51d11ae68a489980411ec1480ab, type: 2}
+  item: {fileID: 11400000, guid: 64c4f623c69a0d44a8de2e4dd1f125a1, type: 2}
 --- !u!212 &1330467999
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1616,7 +1616,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6603774, g: 0.43313882, b: 0.30838376, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2346,7 +2346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746487337}
   - component: {fileID: 1746487336}
-  - component: {fileID: 1746487338}
+  - component: {fileID: 1746487339}
   m_Layer: 0
   m_Name: Friend1
   m_TagString: Untagged
@@ -2420,7 +2420,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1746487338
+--- !u!114 &1746487339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2429,12 +2429,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1746487335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a24d48418da457a45ab0f145415b9407, type: 3}
+  m_Script: {fileID: 11500000, guid: 30e7c579bc288c94a9738e09629c8119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
   textMesh: {fileID: 361918724}
   canInteract: 0
+  neededItem: {fileID: 11400000, guid: 1268f51d11ae68a489980411ec1480ab, type: 2}
 --- !u!1001 &1911934162
 PrefabInstance:
   m_ObjectHideFlags: 0
