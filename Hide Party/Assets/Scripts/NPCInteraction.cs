@@ -9,16 +9,30 @@ public class NPCInteraction : Interactable
     private bool hasNeededItem = false;
 
     private Inventory inventory;
+    private DialogueTrigger dialogueTrigger;
+
+    public bool canGiveItem = false;
+    public bool canTalk = true;
 
     private void Start()
     {
         inventory = Inventory.instance;
+        dialogueTrigger = GetComponent<DialogueTrigger>();
     }
 
     public override void Interact()
     {
         base.Interact();
-        GiveItem();
+
+        if (canGiveItem)
+        {
+            GiveItem();
+        }
+        
+        if (canTalk)
+        {
+            dialogueTrigger.TriggerDialogue();
+        }
     }
 
     // Checks if the player has the item the NPC needs and if so, gives it to them 
@@ -42,5 +56,12 @@ public class NPCInteraction : Interactable
                 Debug.Log("You don't have the right item or I already have that item");
             }
         }
+    }
+
+    void CheckAction()
+    {
+        // Check which dialogue etc should be tirggered when player interacts with the NPC
+        // Maybe use phase count system or something like that?
+        // For example, if player hasn't talked with them yet, display phase 0 material
     }
 }

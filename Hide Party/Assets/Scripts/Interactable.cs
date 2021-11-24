@@ -11,6 +11,7 @@ public class Interactable : MonoBehaviour
 
     private InteractionController pcController;
     public bool canInteract;
+    public bool talking = false;
 
     void Update()
     {
