@@ -10,18 +10,20 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
+    public Animator animator;
+
     private Queue<string> sentences;
 
+    private bool isTalking = false;
 
     void Start()
     {
         sentences = new Queue<string>();
-        dialogueBox.SetActive(false);
     }
 
     private void Update()
     {
-        if (dialogueBox.activeSelf)
+        if (isTalking)
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -32,7 +34,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        dialogueBox.SetActive(true);
+        isTalking = true;
+        animator.SetBool("isOpen", true);
 
         nameText.text = dialogue.name;
 
@@ -55,12 +58,23 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        dialogueText.text = sentence;
+        StopAllCoroutines();    // Stops the coroutine if it's still going when the next sentence begins
+        StartCoroutine(TypeSentence(sentence));
+    }
+
+    IEnumerator TypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return null;
+        }
     }
 
     void EndDialogue()
     {
-        dialogueBox.SetActive(false);
-        Debug.Log("Ending conversation");
+        isTalking = false;
+        animator.SetBool("isOpen", false);
     }
 }

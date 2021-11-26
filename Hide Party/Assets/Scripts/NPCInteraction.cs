@@ -14,6 +14,8 @@ public class NPCInteraction : Interactable
     public bool canGiveItem = false;
     public bool canTalk = true;
 
+    public int interactionPhase = 0;
+
     private void Start()
     {
         inventory = Inventory.instance;
@@ -63,5 +65,7 @@ public class NPCInteraction : Interactable
         // Check which dialogue etc should be tirggered when player interacts with the NPC
         // Maybe use phase count system or something like that?
         // For example, if player hasn't talked with them yet, display phase 0 material
+
+
     }
 }
