@@ -12,7 +12,7 @@ public class InteractionController : MonoBehaviour
         {
             if (focus != null)
             {
-                if (!focus.talking)
+                if (!DialogueManager.instance.isTalking)
                 {
                     focus.Interact();
                 }

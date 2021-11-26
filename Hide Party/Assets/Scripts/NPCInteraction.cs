@@ -10,6 +10,7 @@ public class NPCInteraction : Interactable
 
     private Inventory inventory;
     private DialogueTrigger dialogueTrigger;
+    private DialogueTrigger[] dialogueTriggers;
 
     public bool canGiveItem = false;
     public bool canTalk = true;
@@ -20,21 +21,14 @@ public class NPCInteraction : Interactable
     {
         inventory = Inventory.instance;
         dialogueTrigger = GetComponent<DialogueTrigger>();
+        dialogueTriggers = GetComponents<DialogueTrigger>();
     }
 
     public override void Interact()
     {
         base.Interact();
 
-        if (canGiveItem)
-        {
-            GiveItem();
-        }
-        
-        if (canTalk)
-        {
-            dialogueTrigger.TriggerDialogue();
-        }
+        CheckAction();
     }
 
     // Checks if the player has the item the NPC needs and if so, gives it to them 
@@ -51,11 +45,19 @@ public class NPCInteraction : Interactable
                 inventory.Remove(item);
                 hasNeededItem = true;
                 Debug.Log("Removed " + item.name);
+
+                canTalk = true;
+                canGiveItem = false;
+
+                interactionPhase = 2;
+                dialogueTriggers[interactionPhase].TriggerDialogue();
+                interactionPhase = 3;
                 return;
             }
             else
             {
-                Debug.Log("You don't have the right item or I already have that item");
+                dialogueTriggers[interactionPhase].TriggerDialogue();
+                //Debug.Log("You don't have the right item or I already have that item");
             }
         }
     }
@@ -65,7 +67,27 @@ public class NPCInteraction : Interactable
         // Check which dialogue etc should be tirggered when player interacts with the NPC
         // Maybe use phase count system or something like that?
         // For example, if player hasn't talked with them yet, display phase 0 material
-
-
+        if (canGiveItem)
+        {
+            GiveItem();
+        }
+        else if (canTalk)
+        {
+            switch (interactionPhase)
+            {
+                case 0:
+                    dialogueTriggers[interactionPhase].TriggerDialogue();
+                    canGiveItem = true;
+                    canTalk = false;
+                    interactionPhase = 1;
+                    break;
+                case 3:
+                    dialogueTriggers[interactionPhase].TriggerDialogue();
+                    break;
+                default:
+                    Debug.Log("Something is wrong, you ain't supposed to see me!");
+                    break;
+            }
+        }
     }
 }
