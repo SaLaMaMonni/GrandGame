@@ -14,10 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The percent for how slow the player moves compared to normal speed")] [Range(0f, 1f)]
     public float slowedPercent = 0.5f;
 
+    private DialogueManager dManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        dManager = FindObjectOfType<DialogueManager>();
     }
 
     // Handles the input processing
@@ -30,7 +32,19 @@ public class PlayerMovement : MonoBehaviour
     // Moves the character according to the input
     private void FixedUpdate()
     {
-        Move();
+        if (dManager != null)
+        {
+            if (!DialogueManager.instance.isTalking)
+            {
+                Move();
+            }
+        }
+        else
+        {
+            Move();
+        }
+        
+        
     }
 
     // Base method for movement
