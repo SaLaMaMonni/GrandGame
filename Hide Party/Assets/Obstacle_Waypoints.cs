@@ -73,19 +73,28 @@ public class Obstacle_Waypoints : MonoBehaviour
             int closestToHit = -1;
             int closestToTarget = -1;
 
+            //print("WAYPOINTTEJA ON MUKAMAS " + waypoints.Count);
             for (int i = 0; i < waypoints.Count; i++)
             {
-                if (Vector2.Distance(hit, wpPos[waypoints[i]]) < lastHitDistance)
+                float hDist = Vector2.Distance(hit, wpPos[waypoints[i]]);
+                if (hDist < lastHitDistance)
                 {
                     closestToHit = waypoints[i];
+                    lastHitDistance = hDist;
                 }
 
-                if (Vector2.Distance(target, wpPos[waypoints[i]]) < lastTargetDistance)
+                float tDist = Vector2.Distance(target, wpPos[waypoints[i]]);
+                if (tDist < lastTargetDistance)
                 {
                     closestToTarget = waypoints[i];
+                    lastTargetDistance = tDist;
                 }
-
+                print(wpPos[waypoints[i]]);
             }
+
+            print(closestToHit + " " + closestToTarget);
+            print("PLAYER: " + (WPdir)closestToTarget + "   " + "NPC: " + (WPdir)closestToHit);
+            waypointResults.Add(wpPos[closestToHit]);
         }
         return waypointResults;
     }
