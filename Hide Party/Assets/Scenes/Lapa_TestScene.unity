@@ -164,8 +164,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3c845904f6ca741b3e4d58a988bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1
   textMesh: {fileID: 1915620540}
+  interactionTransform: {fileID: 150472709}
   canInteract: 0
   item: {fileID: 11400000, guid: 64c4f623c69a0d44a8de2e4dd1f125a1, type: 2}
 --- !u!212 &150472708
@@ -1032,8 +1033,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3c845904f6ca741b3e4d58a988bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1
   textMesh: {fileID: 620089894}
+  interactionTransform: {fileID: 973845650}
   canInteract: 0
   item: {fileID: 11400000, guid: 1268f51d11ae68a489980411ec1480ab, type: 2}
 --- !u!1 &1126662675
@@ -1066,8 +1068,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3c845904f6ca741b3e4d58a988bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1
   textMesh: {fileID: 1425037339}
+  interactionTransform: {fileID: 1126662678}
   canInteract: 0
   item: {fileID: 11400000, guid: 1268f51d11ae68a489980411ec1480ab, type: 2}
 --- !u!212 &1126662677
@@ -1166,8 +1169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba3c845904f6ca741b3e4d58a988bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1
   textMesh: {fileID: 359033276}
+  interactionTransform: {fileID: 1330468000}
   canInteract: 0
   item: {fileID: 11400000, guid: 64c4f623c69a0d44a8de2e4dd1f125a1, type: 2}
 --- !u!212 &1330467999
@@ -1681,6 +1685,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1522486119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522486120}
+  m_Layer: 0
+  m_Name: InteractionPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522486120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522486119}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1746487337}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1599459714
 GameObject:
   m_ObjectHideFlags: 0
@@ -1800,6 +1834,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1746487337}
   - component: {fileID: 1746487336}
+  - component: {fileID: 1746487343}
   - component: {fileID: 1746487339}
   - component: {fileID: 1746487338}
   - component: {fileID: 1746487341}
@@ -1852,8 +1887,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.6960249, g: 0.514151, b: 1, a: 1}
+  m_Sprite: {fileID: 865061597683244233, guid: 005b4ba0593fc264c919efcf46df8cef, type: 3}
+  m_Color: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1875,6 +1910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 361918726}
+  - {fileID: 1522486120}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1909,8 +1945,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e7c579bc288c94a9738e09629c8119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 0.7
   textMesh: {fileID: 361918724}
+  interactionTransform: {fileID: 1522486120}
   canInteract: 0
   neededItem: {fileID: 11400000, guid: 64c4f623c69a0d44a8de2e4dd1f125a1, type: 2}
   canGiveItem: 0
@@ -1966,6 +2003,25 @@ MonoBehaviour:
     name: Matti
     sentences:
     - Hey! Thanks again for the mushroom! Now go and have fun!
+--- !u!95 &1746487343
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1746487335}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 89ecfd63cac1b8f4eae1c61a83e17df2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1915620539
 GameObject:
   m_ObjectHideFlags: 0
@@ -2170,6 +2226,10 @@ PrefabInstance:
     - target: {fileID: 843733276803219145, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 843733276803219145, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 843733276803219189, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
       propertyPath: m_Pivot.x
