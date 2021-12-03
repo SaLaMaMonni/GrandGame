@@ -14,11 +14,14 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("The percent for how slow the player moves compared to normal speed")] [Range(0f, 1f)]
     public float slowedPercent = 0.5f;
 
+    private Animator animator;
+
     private DialogueManager dManager;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         dManager = FindObjectOfType<DialogueManager>();
     }
 
@@ -44,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             Move();
         }
         
-        
+        UpdateAnimations();
     }
 
     // Base method for movement
@@ -58,6 +61,37 @@ public class PlayerMovement : MonoBehaviour
         {
             rb.MovePosition(rb.position + movement.normalized * (moveSpeed * slowedPercent) * Time.fixedDeltaTime);
         }
+    }
+
+    void UpdateAnimations()
+    {
+        if (movement.x == 0 && movement.y == 0)
+        {
+            animator.SetBool("isRunning", false);
+        }
+        else
+        {
+            animator.SetBool("isRunning", true);
+
+            if (movement.x < 0)
+            {
+                // Vasemmalle
+                //animator.SetTrigger("toLeft");
+
+                animator.SetBool("isLeft", true);
+                animator.SetBool("isRight", false);
+            }
+            else if (movement.x > 0)
+            {
+                // Oikealle
+                //animator.SetTrigger("toRight");
+
+                animator.SetBool("isLeft", false);
+                animator.SetBool("isRight", true);
+            }
+        }
+
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
