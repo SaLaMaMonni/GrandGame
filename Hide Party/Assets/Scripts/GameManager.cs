@@ -23,9 +23,6 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    public bool isPCInteracting = false;
-
-
     void Awake()
     {
         if (instance == null)
@@ -46,7 +43,6 @@ public class GameManager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         

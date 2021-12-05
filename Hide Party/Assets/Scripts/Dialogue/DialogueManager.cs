@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (isTalking)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 DisplayNextSentence();
             }

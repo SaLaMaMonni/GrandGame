@@ -7,10 +7,18 @@ using TMPro;
 public class Interactable : MonoBehaviour
 {
     [SerializeField] public float radius = 2f;
+
     [SerializeField] private TextMeshPro textMesh;
+
+    public Transform interactionTransform = null;
 
     private InteractionController pcController;
     public bool canInteract;
+
+    private void Start()
+    {
+        
+    }
 
     void Update()
     {
@@ -20,7 +28,12 @@ public class Interactable : MonoBehaviour
     // Checks whether a player character is inside the radius or not and acts upon it
     void CheckRadius()
     {
-        RaycastHit2D hit = Physics2D.CircleCast(transform.position, radius, Vector2.zero);
+        if (interactionTransform == null)
+        {
+            interactionTransform = transform;
+        }
+
+        RaycastHit2D hit = Physics2D.CircleCast(interactionTransform.position, radius, Vector2.zero);
 
         if (hit)
         {
@@ -72,7 +85,12 @@ public class Interactable : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        if (interactionTransform == null)
+        {
+            interactionTransform = transform;
+        }
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(interactionTransform.position, radius);
     }
 }
