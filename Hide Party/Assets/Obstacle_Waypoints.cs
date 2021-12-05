@@ -96,7 +96,7 @@ public class Obstacle_Waypoints : MonoBehaviour
             print("PLAYER: " + (WPdir)closestToTarget + "   " + "NPC: " + (WPdir)closestToHit);
 
             waypointResults.Add(wpPos[closestToHit]);
-            if ( Mathf.Abs(Mathf.Abs(closestToHit) - Mathf.Abs(closestToTarget)) > 1)
+            if ( Mathf.Abs(Mathf.Abs(closestToHit) - Mathf.Abs(closestToTarget)) == 2)
             {
                 
             }
