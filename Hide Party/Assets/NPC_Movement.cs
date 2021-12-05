@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class NPC_Movement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    Vector2 targetPos;
+
+    public bool getTarget = false;
+
+
+    private void Update()
     {
-        
+        if (getTarget)
+        {
+            GetValidWaypoint();
+            getTarget = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void GetValidWaypoint()
     {
-        
+
     }
 }
