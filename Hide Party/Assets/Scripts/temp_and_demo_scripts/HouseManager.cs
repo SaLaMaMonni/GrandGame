@@ -12,9 +12,21 @@ public class HouseManager : MonoBehaviour
     private int nextRoom = -1;
     private int previousRoom = -1;
 
+    public static HouseManager HM;
+    public Sprite debugSprite; 
+
     private void Awake()
     {
-        foreach(Data_Room room in rooms)
+        if (HM != null && HM != this)
+        {
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            HM = this;
+        }
+
+        foreach (Data_Room room in rooms)
         {
             room.hider.SetActive(true);
 
@@ -85,6 +97,20 @@ public class HouseManager : MonoBehaviour
             }
             yield return null;
         }
+    }
+
+    public Collider2D[] GetRoomWaypoints(int userRoom)
+    {
+        Collider2D trigger = rooms[userRoom].trigger;
+
+        Collider2D[] hits = Physics2D.OverlapBoxAll(trigger.bounds.center, trigger.bounds.size, 0f, LayerMask.GetMask("Waypoint"));
+
+        foreach (Collider2D col in hits)
+        {
+            col.gameObject.GetComponent<SpriteRenderer>().sprite = debugSprite;
+        }
+
+        return hits;
     }
 }
 
