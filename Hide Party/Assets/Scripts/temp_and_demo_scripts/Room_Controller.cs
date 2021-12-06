@@ -6,7 +6,8 @@ public class Room_Controller : MonoBehaviour
 {
     // Parts and references
     GameObject player;
-    HouseManager manager;
+    Collider2D trigger;
+    //HouseManager manager;
 
     // Attributes etc
     public int roomNumber = -1;
@@ -15,7 +16,8 @@ public class Room_Controller : MonoBehaviour
 
     private void Awake()
     {
-        manager = transform.parent.GetComponent<HouseManager>();
+        trigger = GetComponent<Collider2D>();
+        //manager = transform.parent.GetComponent<HouseManager>();
         player = GameObject.Find("Player");
     }
 
@@ -24,24 +26,25 @@ public class Room_Controller : MonoBehaviour
         if(!playerInRoom && collision.gameObject == player)
         {
             playerInRoom = true;
-            manager.Activate(roomNumber);
+            HouseManager.HM.Activate(roomNumber);
 
             if(!revealed)
             {
-                manager.Reveal(roomNumber);
+                HouseManager.HM.Reveal(roomNumber);
                 revealed = true;
             }
         }
     }
-
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (playerInRoom && collision.gameObject == player)
         {
             playerInRoom = false;
-            manager.Deactivate(roomNumber);
+            HouseManager.HM.Deactivate(roomNumber);
         }
     }
+
+
 
 }
