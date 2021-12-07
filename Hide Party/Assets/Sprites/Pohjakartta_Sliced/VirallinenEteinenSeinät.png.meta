@@ -1,43 +1,43 @@
 fileFormatVersion: 2
-guid: 6ade721d542391c49bfcff7cb565ac90
+guid: 0ed7b279cfb844e4daf4a455f46a3657
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 599387146170244718
-    second: MC_SpriteSheet - FrontView_0
+      213: 1747478752197365371
+    second: "VirallinenEteinenSein\xE4t_taka"
   - first:
-      213: -8245601540177053808
-    second: MC_SpriteSheet - FrontView_1
+      213: -4169912666533310407
+    second: "VirallinenEteinenSein\xE4t_etu_0"
   - first:
-      213: -5638700148664112961
-    second: MC_SpriteSheet - FrontView_2
+      213: -281479378737971679
+    second: "VirallinenEteinenSein\xE4t_etu_1"
   - first:
-      213: -4723064543392221681
-    second: MC_SpriteSheet - FrontView_3
+      213: 8211636597728266322
+    second: "VirallinenEteinenSein\xE4t_etu_2"
   - first:
-      213: 5318829200176786328
-    second: MC_SpriteSheet - FrontView_4
+      213: -793008983039440837
+    second: "VirallinenEteinenSein\xE4t_etu_3"
   - first:
-      213: -6182337092687901808
-    second: MC_SpriteSheet - FrontView_5
+      213: -4693696010203966345
+    second: "VirallinenEteinenSein\xE4t_etu_4"
   - first:
-      213: -1176663125798332930
-    second: MC_SpriteSheet - FrontView_6
+      213: -8377368496632270072
+    second: "VirallinenEteinenSein\xE4t_etu_5"
   - first:
-      213: 4714111869829059984
-    second: MC_SpriteSheet - FrontView_7
+      213: 3357259646118969087
+    second: "VirallinenEteinenSein\xE4t_perustukset_0"
   - first:
-      213: 6142117157136880154
-    second: MC_SpriteSheet - FrontView_8
+      213: -1483676545876404283
+    second: "VirallinenEteinenSein\xE4t_perustukset_1"
   - first:
-      213: 4095258824818365176
-    second: MC_SpriteSheet - FrontView_9
+      213: 3700830896053870933
+    second: "VirallinenEteinenSein\xE4t_perustukset_2"
   - first:
-      213: 2118171012247177517
-    second: MC_SpriteSheet - FrontView_10
+      213: 871905159741702530
+    second: "VirallinenEteinenSein\xE4t_perustukset_3"
   - first:
-      213: 6571796285572493645
-    second: MC_SpriteSheet - FrontView_11
+      213: 7633135318593939929
+    second: "VirallinenEteinenSein\xE4t_perustukset_4"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,253 +127,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_0
+      name: "VirallinenEteinenSein\xE4t_taka"
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 352
+        width: 352
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6e996a0f63715800800000000000000
-      internalID: 599387146170244718
+      spriteID: b7e4445aaaa404810800000000000000
+      internalID: 1747478752197365371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_1
+      name: "VirallinenEteinenSein\xE4t_etu_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93051eed58e7126c0800000000000000
+      internalID: -4169912666533310407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_etu_1"
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 128
+        width: 32
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12eb9b21ffbf71cf0800000000000000
+      internalID: -281479378737971679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_etu_2"
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258c0308af795f170800000000000000
+      internalID: 8211636597728266322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_etu_3"
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 128
+        width: 32
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b388d3e088aaef4f0800000000000000
+      internalID: -793008983039440837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_etu_4"
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 96
+        width: 61
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774df14d854acdeb0800000000000000
+      internalID: -4693696010203966345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_etu_5"
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 131
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8037fadccbb9dbb80800000000000000
+      internalID: -8377368496632270072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_perustukset_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffebca15cd1679e20800000000000000
+      internalID: 3357259646118969087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "VirallinenEteinenSein\xE4t_perustukset_1"
       rect:
         serializedVersion: 2
         x: 32
         y: 64
-        width: 32
+        width: 64
         height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0973556161db19d80800000000000000
-      internalID: -8245601540177053808
+      spriteID: 5c75579da0ce86be0800000000000000
+      internalID: -1483676545876404283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_2
+      name: "VirallinenEteinenSein\xE4t_perustukset_2"
       rect:
         serializedVersion: 2
-        x: 64
+        x: 227
         y: 64
-        width: 32
+        width: 61
         height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb8eee307105fb1b0800000000000000
-      internalID: -5638700148664112961
+      spriteID: 551e415971efb5330800000000000000
+      internalID: 3700830896053870933
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_3
+      name: "VirallinenEteinenSein\xE4t_perustukset_3"
       rect:
         serializedVersion: 2
-        x: 96
+        x: 288
         y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f063dd752dd447eb0800000000000000
-      internalID: -4723064543392221681
+      spriteID: 2810c3c8f11a91c00800000000000000
+      internalID: 871905159741702530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89b23892af640d940800000000000000
-      internalID: 5318829200176786328
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09bcd9c6b2de33aa0800000000000000
-      internalID: -6182337092687901808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_6
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ef55d7e0f17abafe0800000000000000
-      internalID: -1176663125798332930
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_7
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0951d98e4c3eb6140800000000000000
-      internalID: 4714111869829059984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a12d9f7130f2d3550800000000000000
-      internalID: 6142117157136880154
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_9
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8f2159c143845d830800000000000000
-      internalID: 4095258824818365176
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_10
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d29c5862051456d10800000000000000
-      internalID: 2118171012247177517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_11
+      name: "VirallinenEteinenSein\xE4t_perustukset_4"
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 128
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d41b7c127e5b33b50800000000000000
-      internalID: 6571796285572493645
+      spriteID: 9d9a74351285ee960800000000000000
+      internalID: 7633135318593939929
       vertices: []
       indices: 
       edges: []

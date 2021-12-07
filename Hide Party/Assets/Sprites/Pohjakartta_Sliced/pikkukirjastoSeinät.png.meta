@@ -1,43 +1,34 @@
 fileFormatVersion: 2
-guid: 6ade721d542391c49bfcff7cb565ac90
+guid: df9d5f39f15150a4e81009a5964a2424
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 599387146170244718
-    second: MC_SpriteSheet - FrontView_0
+      213: 6222630769967743438
+    second: "pikkukirjastoSein\xE4t_taka"
   - first:
-      213: -8245601540177053808
-    second: MC_SpriteSheet - FrontView_1
+      213: 3196835793775620675
+    second: "pikkukirjastoSein\xE4t_etu_0"
   - first:
-      213: -5638700148664112961
-    second: MC_SpriteSheet - FrontView_2
+      213: -6523116543448779164
+    second: "pikkukirjastoSein\xE4t_etu_1"
   - first:
-      213: -4723064543392221681
-    second: MC_SpriteSheet - FrontView_3
+      213: -2543946452148561929
+    second: "pikkukirjastoSein\xE4t_etu_2"
   - first:
-      213: 5318829200176786328
-    second: MC_SpriteSheet - FrontView_4
+      213: 2736145733644495242
+    second: "pikkukirjastoSein\xE4t_etu_3"
   - first:
-      213: -6182337092687901808
-    second: MC_SpriteSheet - FrontView_5
+      213: -2672642066894354805
+    second: "pikkukirjastoSein\xE4t_etu_4"
   - first:
-      213: -1176663125798332930
-    second: MC_SpriteSheet - FrontView_6
+      213: 6954223811032811317
+    second: "pikkukirjastoSein\xE4t_perustukset_0"
   - first:
-      213: 4714111869829059984
-    second: MC_SpriteSheet - FrontView_7
+      213: 3593668334516651404
+    second: "pikkukirjastoSein\xE4t_perustukset_1"
   - first:
-      213: 6142117157136880154
-    second: MC_SpriteSheet - FrontView_8
-  - first:
-      213: 4095258824818365176
-    second: MC_SpriteSheet - FrontView_9
-  - first:
-      213: 2118171012247177517
-    second: MC_SpriteSheet - FrontView_10
-  - first:
-      213: 6571796285572493645
-    second: MC_SpriteSheet - FrontView_11
+      213: -5437783861234451163
+    second: "pikkukirjastoSein\xE4t_perustukset_2"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,253 +118,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_0
+      name: "pikkukirjastoSein\xE4t_taka"
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 320
+        width: 352
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6e996a0f63715800800000000000000
-      internalID: 599387146170244718
+      spriteID: ec1c75467b93b5650800000000000000
+      internalID: 6222630769967743438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0973556161db19d80800000000000000
-      internalID: -8245601540177053808
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb8eee307105fb1b0800000000000000
-      internalID: -5638700148664112961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f063dd752dd447eb0800000000000000
-      internalID: -4723064543392221681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_4
+      name: "pikkukirjastoSein\xE4t_etu_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 124
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89b23892af640d940800000000000000
-      internalID: 5318829200176786328
+      spriteID: 342ff3587317d5c20800000000000000
+      internalID: 3196835793775620675
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_5
+      name: "pikkukirjastoSein\xE4t_etu_1"
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 320
+        y: 128
         width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09bcd9c6b2de33aa0800000000000000
-      internalID: -6182337092687901808
+      spriteID: 466f24f801c3975a0800000000000000
+      internalID: -6523116543448779164
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_6
+      name: "pikkukirjastoSein\xE4t_etu_2"
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 96
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef55d7e0f17abafe0800000000000000
-      internalID: -1176663125798332930
+      spriteID: 7f7d1102e2612bcd0800000000000000
+      internalID: -2543946452148561929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_7
+      name: "pikkukirjastoSein\xE4t_etu_3"
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 256
+        y: 96
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0951d98e4c3eb6140800000000000000
-      internalID: 4714111869829059984
+      spriteID: a89a49b4c0eb8f520800000000000000
+      internalID: 2736145733644495242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_8
+      name: "pikkukirjastoSein\xE4t_etu_4"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 128
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b860ffe433ed8ead0800000000000000
+      internalID: -2672642066894354805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "pikkukirjastoSein\xE4t_perustukset_0"
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 60
+        width: 64
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a12d9f7130f2d3550800000000000000
-      internalID: 6142117157136880154
+      spriteID: 5378c2906bd528060800000000000000
+      internalID: 6954223811032811317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_9
+      name: "pikkukirjastoSein\xE4t_perustukset_1"
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
+        x: 320
+        y: 64
         width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f2159c143845d830800000000000000
-      internalID: 4095258824818365176
+      spriteID: c854f676f464fd130800000000000000
+      internalID: 3593668334516651404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_10
+      name: "pikkukirjastoSein\xE4t_perustukset_2"
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 128
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d29c5862051456d10800000000000000
-      internalID: 2118171012247177517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MC_SpriteSheet - FrontView_11
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d41b7c127e5b33b50800000000000000
-      internalID: 6571796285572493645
+      spriteID: 52db4c9836c1984b0800000000000000
+      internalID: -5437783861234451163
       vertices: []
       indices: 
       edges: []
