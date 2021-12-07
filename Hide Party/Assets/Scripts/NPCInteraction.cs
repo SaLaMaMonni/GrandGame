@@ -20,7 +20,7 @@ public class NPCInteraction : Interactable
     private void Start()
     {
         inventory = Inventory.instance;
-        dialogueTrigger = GetComponent<DialogueTrigger>();
+        //dialogueTrigger = GetComponent<DialogueTrigger>();
         dialogueTriggers = GetComponents<DialogueTrigger>();
     }
 
