@@ -3,8 +3,9 @@
     "",
     "\\Hide Party",
     "\\Hide Party\\Assets",
-    "\\Hide Party\\Assets\\Scripts"
+    "\\Hide Party\\Assets\\Scripts",
+    "\\Hide Party\\Assets\\Scripts\\UI"
   ],
-  "SelectedNode": "\\Hide Party\\Assets\\Scripts\\Interactable.cs",
+  "SelectedNode": "\\Hide Party\\Assets\\Scripts\\GameManager.cs",
   "PreviewInSolutionExplorer": false
 }
