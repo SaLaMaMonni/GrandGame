@@ -2175,6 +2175,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1301799649286278369, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278382, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: m_Name
       value: Friend1
@@ -2318,6 +2322,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 470686712016280104, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
+      propertyPath: m_Offset.y
+      value: -1.21
+      objectReference: {fileID: 0}
     - target: {fileID: 7540190927905600756, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
       propertyPath: m_Name
       value: TestDummy

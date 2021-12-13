@@ -12,10 +12,10 @@ TagManager:
   - Water
   - UI
   - Crowd
-  - 
-  - 
-  - 
-  - 
+  - Obstacle
+  - Avoidable
+  - Waypoint
+  - NPC
   - 
   - 
   - 

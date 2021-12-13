@@ -8,7 +8,7 @@ public class MainMenuController : MonoBehaviour
     public void StartGame()
     {
         Debug.Log("Play pressed");
-        //SceneManager.LoadScene(1);
+        SceneManager.LoadScene(1);
     }
 
     public void QuitGame()

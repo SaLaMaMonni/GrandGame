@@ -37,6 +37,7 @@ public class Interactable : MonoBehaviour
 
         if (hit)
         {
+            Debug.Log("I hit: " + hit.collider.gameObject.name);
             pcController = hit.collider.GetComponent<InteractionController>();
 
             if (pcController != null)  // Was the hit caused by the player and if so, do stuff
