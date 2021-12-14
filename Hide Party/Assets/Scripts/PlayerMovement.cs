@@ -75,23 +75,15 @@ public class PlayerMovement : MonoBehaviour
 
             if (movement.x < 0)
             {
-                // Vasemmalle
-                //animator.SetTrigger("toLeft");
-
                 animator.SetBool("isLeft", true);
                 animator.SetBool("isRight", false);
             }
             else if (movement.x > 0)
             {
-                // Oikealle
-                //animator.SetTrigger("toRight");
-
                 animator.SetBool("isLeft", false);
                 animator.SetBool("isRight", true);
             }
         }
-
-        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
