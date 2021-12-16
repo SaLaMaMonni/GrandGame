@@ -15,6 +15,10 @@ public class Interactable : MonoBehaviour
     private InteractionController pcController;
     public bool canInteract;
 
+    private bool checkRadius;
+    private float checkTimer = 0f;
+    private float checkInterval = 0.5f;
+
     private void Start()
     {
         
@@ -22,9 +26,28 @@ public class Interactable : MonoBehaviour
 
     void Update()
     {
-        CheckRadius();
+        if (checkRadius)
+        {
+            checkTimer += Time.deltaTime;
+            if(checkTimer >= checkInterval)
+            {
+                checkTimer = 0f;
+                CheckRadius();
+            }
+        }
+    }
+    
+    private void OnBecameVisible()
+    {
+        checkRadius = true;
     }
 
+    private void OnBecameInvisible()
+    {
+        checkTimer = 0f;
+        checkRadius = false;
+    }
+    
     // Checks whether a player character is inside the radius or not and acts upon it
     void CheckRadius()
     {
@@ -37,7 +60,7 @@ public class Interactable : MonoBehaviour
 
         if (hit)
         {
-            Debug.Log("I hit: " + hit.collider.gameObject.name);
+            //Debug.Log("I hit: " + hit.collider.gameObject.name);
             pcController = hit.collider.GetComponent<InteractionController>();
 
             if (pcController != null)  // Was the hit caused by the player and if so, do stuff
