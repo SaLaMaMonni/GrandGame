@@ -44,7 +44,7 @@ public class HouseManager : MonoBehaviour
 
         foreach (SpriteRenderer rend in room.back)
         {
-            print(rend.gameObject.name);
+            //print(rend.gameObject.name);
             rend.material.color = Color.white;
         }
     }
