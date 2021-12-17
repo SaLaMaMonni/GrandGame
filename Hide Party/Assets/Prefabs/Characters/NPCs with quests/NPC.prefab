@@ -186,6 +186,7 @@ GameObject:
   - component: {fileID: 1301799649286278372}
   - component: {fileID: 1301799649286278373}
   - component: {fileID: 1301799649286278375}
+  - component: {fileID: 3171630224841704988}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -299,6 +300,9 @@ MonoBehaviour:
   canGiveItem: 0
   canTalk: 1
   interactionPhase: 0
+  questId: 1
+  isQuestOpen: 0
+  questDescription: Fetch Matti some beer
 --- !u!114 &1301799649286278371
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,6 +372,22 @@ MonoBehaviour:
     name: Matti
     sentences:
     - Hey! Thanks again for the mushroom! Now go and have fun!
+--- !u!114 &3171630224841704988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301799649286278382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92ad9c7d95564724b8aaab9d0135e654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Matti
+    sentences:
+    - Umm... Why are you staring at me?
 --- !u!1 &1301799650131038126
 GameObject:
   m_ObjectHideFlags: 0

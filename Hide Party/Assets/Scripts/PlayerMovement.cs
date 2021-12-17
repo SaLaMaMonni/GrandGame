@@ -40,14 +40,14 @@ public class PlayerMovement : MonoBehaviour
             if (!DialogueManager.instance.isTalking)
             {
                 Move();
+                UpdateAnimations();
             }
         }
         else
         {
             Move();
+            UpdateAnimations();
         }
-        
-        UpdateAnimations();
     }
 
     // Base method for movement
