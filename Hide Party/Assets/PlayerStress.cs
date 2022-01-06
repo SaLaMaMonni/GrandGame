@@ -2,6 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
+
+
+/*
+ * Varmasti voi yhdist‰‰ systeemin niin ettei tarvii kahta kertaa tehd‰ juttuja. Siis kun arvot on valmiiks joko pos tai neg ni pit‰is toimii.
+ * Normalisoi. Vauhti tuntuu hitaammalt Lauran koneel (ehk‰ ruutu lag? en usko)
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
 public class PlayerStress : MonoBehaviour
 {
     [Range(0.1f, 10f)]
@@ -138,11 +162,11 @@ public class PlayerStress : MonoBehaviour
                 Stressor target = hit.GetComponent<Stressor>();
                 if (target != null)
                 {
-                    stressToAdd -= target.stressorMultiplier;
+                    stressToAdd += target.stressorMultiplier;
                 }
             }
 
-            curStress -= (stressToAdd * Time.deltaTime) * stressSpeedModifier;
+            curStress += (stressToAdd * Time.deltaTime) * stressSpeedModifier;
 
             if(curStress < 0f)
             {
