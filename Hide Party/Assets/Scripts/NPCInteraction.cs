@@ -31,8 +31,6 @@ public class NPCInteraction : Interactable
     // Checks whether the player can start the NPC's quest or not and acts upon it.
     public override void Interact()
     {
-        base.Interact();
-
         if (isQuestOpen)
         {
             CheckAction();
