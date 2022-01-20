@@ -42,7 +42,7 @@ public class Interactable : MonoBehaviour
         checkRadius = true;
     }
 
-    private void OnBecameInvisible()
+    public virtual void OnBecameInvisible()
     {
         checkTimer = 0f;
         checkRadius = false;
