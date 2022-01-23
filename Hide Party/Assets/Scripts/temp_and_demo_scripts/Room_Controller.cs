@@ -6,6 +6,7 @@ public class Room_Controller : MonoBehaviour
 {
     // Parts and references
     GameObject player;
+    CurrentRoom playerRoom;
     Collider2D trigger;
     //HouseManager manager;
 
@@ -18,7 +19,8 @@ public class Room_Controller : MonoBehaviour
     {
         trigger = GetComponent<Collider2D>();
         //manager = transform.parent.GetComponent<HouseManager>();
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerRoom = player.GetComponent<CurrentRoom>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,6 +28,7 @@ public class Room_Controller : MonoBehaviour
         if(!playerInRoom && collision.gameObject == player)
         {
             playerInRoom = true;
+            playerRoom.number = roomNumber;
             HouseManager.HM.Activate(roomNumber);
 
             if(!revealed)

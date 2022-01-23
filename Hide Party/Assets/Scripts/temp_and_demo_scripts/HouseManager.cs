@@ -12,6 +12,8 @@ public class HouseManager : MonoBehaviour
     private int nextRoom = -1;
     private int previousRoom = -1;
 
+    private GameObject player;
+
     public static HouseManager HM;
     public Sprite debugSprite; 
 
@@ -35,6 +37,11 @@ public class HouseManager : MonoBehaviour
                 backwall.material.color = Color.black;
             }
         }
+    }
+
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
     }
 
     public void Reveal(int selection)
