@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public bool isInteracting = false;
+
     void Awake()
     {
         if (instance == null)
