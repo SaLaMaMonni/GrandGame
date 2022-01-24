@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (dManager != null)
         {
-            if (!DialogueManager.instance.isTalking)
+            if (!DialogueManager.instance.isTalking && !GameManager.Instance.isInteracting)
             {
                 Move();
                 UpdateAnimations();

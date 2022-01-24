@@ -8,7 +8,7 @@ public class Interactable : MonoBehaviour
 {
     [SerializeField] public float radius = 2f;
 
-    [SerializeField] private TextMeshPro textMesh;
+    [SerializeField] public TextMeshPro textMesh;
 
     public Transform interactionTransform = null;
 
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
         
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (checkRadius)
         {
