@@ -2712,30 +2712,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7464624606483506889, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: radius
-      value: 0.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: locations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: dogLocations.Array.size
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: dogLocations.Array.data[0]
       value: 
@@ -2791,10 +2767,6 @@ PrefabInstance:
     - target: {fileID: 7464624606953998805, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: m_Name
       value: Dog
-      objectReference: {fileID: 0}
-    - target: {fileID: 7464624607043260825, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.84
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}

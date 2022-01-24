@@ -115,10 +115,13 @@ public class DogInteraction : Interactable
     {
         base.OnBecameInvisible();
 
-        onTheMove = false;
-        animator.SetTrigger("hidden");
+        if (onTheMove)
+        {
+            onTheMove = false;
+            animator.SetTrigger("hidden");
 
-        TeleportAway();
+            TeleportAway();
+        }
     }
 
     // Sets up all the possible locations for dog when the game starts.
