@@ -15,6 +15,9 @@ public class DogInteraction : Interactable
     List<Vector3> locations;
     private Vector3 currentLocation;
 
+    bool firstPet = true;
+    [SerializeField] GameObject jacket;
+
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
@@ -60,8 +63,15 @@ public class DogInteraction : Interactable
 
     // Dog will walk away after petting is done.
     // Also reactivates player's renderer since the specific animation is done.
+    // If it's the first time player pets the dog, it will drop a quest item.
     public void StartMovingAway()
     {
+        if (firstPet)
+        {
+            firstPet = false;
+            Instantiate(jacket, transform.position, Quaternion.identity);
+        }
+
         player.GetComponent<Renderer>().enabled = true;
         onTheMove = true;
     }

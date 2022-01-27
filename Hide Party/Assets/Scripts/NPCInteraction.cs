@@ -103,4 +103,11 @@ public class NPCInteraction : Interactable
         // If the player doesn't have the correct item, trigger this dialogue
         dialogueTriggers[interactionPhase].TriggerDialogue();
     }
+
+    public void GiveItemRemotely()
+    {
+        interactionPhase = 2;
+
+        QuestManager.Instance.OpenNextQuest();
+    }
 }
