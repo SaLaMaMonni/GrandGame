@@ -98,7 +98,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Interact [e]
+  m_text: Pet [e]
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -244,7 +244,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1700252229220594875, guid: bb1b34c5d876d0a44a52f7950031e3de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -287,10 +287,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85771f581dbbd9246ba404cea24ab0a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 0.23
   textMesh: {fileID: 7464624606483506890}
   interactionTransform: {fileID: 7464624607043260825}
   canInteract: 0
+  speed: 2
+  dogLocations:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &7464624607043260826
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +319,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7464624607043260826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.33, z: 0}
+  m_LocalPosition: {x: -0.84, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7464624606953998794}
