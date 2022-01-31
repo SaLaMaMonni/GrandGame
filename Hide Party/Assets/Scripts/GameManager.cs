@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
+    public bool isInteracting = false;
+
+    public NPCInteraction mattiObject;
+
     void Awake()
     {
         if (instance == null)
@@ -50,5 +54,13 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void HideMatti()
+    {
+        mattiObject.GiveItemRemotely();
+
+        Vector2 hiding = new Vector3(0, -30, 0);
+        mattiObject.transform.position = hiding;
     }
 }
