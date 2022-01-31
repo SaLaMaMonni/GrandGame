@@ -27,6 +27,8 @@ public class QuestManager : MonoBehaviour
 
     private int currentQuest = 1;       // Main quests start from 1. Quest with ID 0 are side quests
 
+    private int highestQuestNumber;
+
     void Awake()
     {
         if (instance == null)
@@ -57,9 +59,14 @@ public class QuestManager : MonoBehaviour
             if (quest.questId > 0)
             {
                 int id = quest.questId;
-                //Debug.Log("Quest ID: " + id + " and quest list length: " + quests.Length);
+                //Debug.Log("Quest ID: " + id + " and quest list length: " + quests.Length + "and name: " + quest.name);
 
                 quests[id] = quest;
+
+                if (quest.questId > highestQuestNumber)
+                {
+                    highestQuestNumber = quest.questId;
+                }
             }
         }
 
@@ -69,15 +76,16 @@ public class QuestManager : MonoBehaviour
     void OpenFirstQuest()
     {
         quests[currentQuest].isQuestOpen = true;
+        Debug.Log("Quests in total: " + highestQuestNumber);
     }
 
     public void OpenNextQuest()
     {
         currentQuest++;
 
-        Debug.Log(currentQuest + quests.Length);
+        Debug.Log("Current quest: " + currentQuest);
 
-        if (currentQuest < quests.Length)
+        if (currentQuest < highestQuestNumber)
         {
             quests[currentQuest].isQuestOpen = true;
         }
