@@ -34,7 +34,7 @@ public class HouseManager : MonoBehaviour
 
             foreach (SpriteRenderer backwall in room.back)
             {
-                backwall.material.color = Color.black;
+                //backwall.material.color = Color.black;
             }
         }
     }
@@ -52,7 +52,7 @@ public class HouseManager : MonoBehaviour
         foreach (SpriteRenderer rend in room.back)
         {
             //print(rend.gameObject.name);
-            rend.material.color = Color.white;
+            //rend.material.color = Color.white;
         }
     }
 

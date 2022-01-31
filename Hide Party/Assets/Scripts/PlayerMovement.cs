@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     private DialogueManager dManager;
 
+
+    private int uselessTestInt = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,6 +32,17 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //uselessTestInt++;
+        //if (uselessTestInt > 200)
+        //{
+        //    uselessTestInt = 0;
+        //    RaycastHit2D hit = Physics2D.Linecast(transform.position, Input.mousePosition);
+        //    if (hit != null)
+        //    {
+        //        print(hit.collider.name);
+        //    }
+        //}
     }
 
     // Moves the character according to the input
