@@ -28,6 +28,13 @@ public class Inventory : MonoBehaviour
 
     public List<Item> items = new List<Item>();
 
+    [SerializeField] Item jacket;
+
+    private void Start()
+    {
+        Add(jacket);        // Adds the first quest's jacket to inventory at the start.
+    }
+
     public bool Add (Item item)
     {
         if (items.Count >= space)
