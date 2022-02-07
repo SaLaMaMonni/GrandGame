@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6551792468274773750}
   - component: {fileID: 6551792468274773737}
-  - component: {fileID: 6551792468274773751}
+  - component: {fileID: 2924497008156674518}
   m_Layer: 0
   m_Name: "ValkonenIsoSohvaTakaap\xE4in"
   m_TagString: Untagged
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6551792468274773751
-BoxCollider2D:
+--- !u!70 &2924497008156674518
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,16 +96,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.08263469}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2}
-    newSize: {x: 6, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 6, y: 1.4380851}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: -0.65}
+  m_Size: {x: 5.8, y: 0.7}
+  m_Direction: 1
