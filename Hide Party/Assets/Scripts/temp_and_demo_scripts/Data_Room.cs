@@ -5,8 +5,12 @@ using UnityEngine;
 [System.Serializable]
 public class Data_Room
 {
-    public SpriteRenderer[] front;
-    public GameObject hider;
     public Collider2D trigger;
-    public SpriteRenderer[] back;
+    public Transform[] foreground;
+    public Transform[] background;
+    public GameObject furniture;
+    [HideInInspector]
+    public List<SpriteRenderer> front;
+    [HideInInspector]
+    public List<SpriteRenderer> back;
 }
