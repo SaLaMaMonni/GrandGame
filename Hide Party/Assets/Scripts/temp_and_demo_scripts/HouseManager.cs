@@ -12,8 +12,10 @@ public class HouseManager : MonoBehaviour
     private int nextRoom = -1;
     private int previousRoom = -1;
 
+    private GameObject player;
+
     public static HouseManager HM;
-    public Sprite debugSprite; 
+    public Sprite debugSprite;
 
     private void Awake()
     {
@@ -28,24 +30,65 @@ public class HouseManager : MonoBehaviour
 
         foreach (Data_Room room in rooms)
         {
-            room.hider.SetActive(true);
+            room.furniture.SetActive(false);
+        }
+    }
 
-            foreach (SpriteRenderer backwall in room.back)
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player");
+
+        int loopCounter = 0;
+        foreach(Data_Room room in rooms)
+        {
+            //room.furniture.SetActive(false);
+            if (room.foreground.Length > 0)
             {
-                backwall.material.color = Color.black;
+                foreach(Transform f in room.foreground)
+                {
+                    int renCount = f.childCount;
+
+                    for(int setRend = 0; setRend < renCount; setRend++)
+                    {
+                        SpriteRenderer activeRend = f.GetChild(setRend).GetComponent<SpriteRenderer>();
+                        Color trans = activeRend.color;
+                        trans.a = 1f;
+                        activeRend.color = trans;
+                        room.front.Add(activeRend);
+                        //print("Set foreground part " + activeRend.name + " in room " + loopCounter);
+                    }
+                }
             }
+
+            if (room.background.Length > 0)
+            {
+                foreach (Transform f in room.background)
+                {
+                    int renCount = f.childCount;
+
+                    for (int setRend = 0; setRend < renCount; setRend++)
+                    {
+                        SpriteRenderer activeRend = f.GetChild(setRend).GetComponent<SpriteRenderer>();
+                        activeRend.color = Color.black;
+                        room.back.Add(activeRend);
+                        //print("Set background part " + activeRend.name + " in room " + loopCounter);
+                    }
+                }
+            }
+
+            loopCounter++;
         }
     }
 
     public void Reveal(int selection)
     {
         Data_Room room = rooms[selection];
-        room.hider.SetActive(false);
 
-        foreach (SpriteRenderer rend in room.back)
+        room.furniture.SetActive(true);
+        foreach (SpriteRenderer back in room.back)
         {
-            //print(rend.gameObject.name);
-            rend.material.color = Color.white;
+            //print("SHOWING "+back.gameObject.name+" "+back.transform.parent.parent.name);
+            back.color = Color.white;
         }
     }
 
@@ -68,13 +111,14 @@ public class HouseManager : MonoBehaviour
     {
         for (float ft = 1f; ft > 0.2; ft -= (0.02f * fade_speed * 100f * Time.deltaTime))
         {
-            if (rooms[nextRoom].front.Length > 0)
+            if (rooms[nextRoom].front.Count > 0)
             {
+                //print("fadeout");
                 foreach (SpriteRenderer rend in rooms[nextRoom].front)
                 {
-                    Color col = rend.material.color;
+                    Color col = rend.color;
                     col.a = ft;
-                    rend.material.color = col;
+                    rend.color = col;
                 }
             }
 
@@ -87,13 +131,14 @@ public class HouseManager : MonoBehaviour
     {
         for (float ft = 0.2f; ft < 1; ft += (0.02f * fade_speed * 100f * Time.deltaTime))
         {
-            if (rooms[previousRoom].front.Length > 0)
+            if (rooms[previousRoom].front.Count > 0)
             {
+                //print("fadein");
                 foreach (SpriteRenderer rend in rooms[previousRoom].front)
                 {
-                    Color col = rend.material.color;
+                    Color col = rend.color;
                     col.a = ft;
-                    rend.material.color = col;
+                    rend.color = col;
                 }
             }
             yield return null;
