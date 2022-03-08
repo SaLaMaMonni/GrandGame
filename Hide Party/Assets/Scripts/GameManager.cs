@@ -50,12 +50,14 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void Update()
+    public void StartGame()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            SceneManager.LoadScene(0);
-        }
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void HideMatti()
