@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     public NPCInteraction mattiObject;
 
+    public GameObject dog;
+
     void Awake()
     {
         if (instance == null)
@@ -62,5 +64,14 @@ public class GameManager : MonoBehaviour
 
         Vector2 hiding = new Vector3(0, -30, 0);
         mattiObject.transform.position = hiding;
+
+        RevealDog();
+    }
+
+    // Dog gives out one of the quest items.
+    // This stops the player from finding the dog too soon.
+    public void RevealDog()
+    {
+        dog.SetActive(true);
     }
 }
