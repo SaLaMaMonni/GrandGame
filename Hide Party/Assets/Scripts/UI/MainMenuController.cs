@@ -9,6 +9,7 @@ public class MainMenuController : MonoBehaviour
     {
         Debug.Log("Play pressed");
         GameManager.Instance.StartGame();
+        Time.timeScale = 1f;
     }
 
     public void QuitGame()

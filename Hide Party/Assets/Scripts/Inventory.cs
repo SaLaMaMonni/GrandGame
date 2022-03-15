@@ -4,18 +4,35 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-
     #region Singleton
-    public static Inventory instance;
+    public static Inventory instance = null;
+
+    public static Inventory Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                Debug.Log("Inventory Instance not found!");
+            }
+
+            return instance;
+        }
+    }
 
     private void Awake()
     {
-        if (instance != null)
+        if (instance == null)
         {
-            Debug.LogWarning("More than one instance of Inventory found!");
+            instance = this;
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            return;
         }
 
-        instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     #endregion
@@ -35,7 +52,7 @@ public class Inventory : MonoBehaviour
         Add(jacket);        // Adds the first quest's jacket to inventory at the start.
     }
 
-    public bool Add (Item item)
+    public bool Add(Item item)
     {
         if (items.Count >= space)
         {
@@ -49,7 +66,7 @@ public class Inventory : MonoBehaviour
         {
             onItemChangedCallback.Invoke();
         }
-       
+
 
         return true;
     }
