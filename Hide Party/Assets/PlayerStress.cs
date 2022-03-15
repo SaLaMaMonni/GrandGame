@@ -31,7 +31,7 @@ public class PlayerStress : MonoBehaviour
     [Range(0.1f, 10f)]
     public float stressSpeedModifier = 1f;
     public float stressMultiplier = 1.01f;
-    public float checkInterval = 5f;
+    public float checkInterval = 2f;
 
     bool gettingStressed;
     bool gettingRelief;
@@ -46,10 +46,14 @@ public class PlayerStress : MonoBehaviour
 
     public Transform stressBarMask;
 
+    public bool hasCurve;
+
     PlayerMovement movement;
     Collider2D[] hits;
     int stressorsLayer;
 
+    public AnimationCurve curve;
+    
 
 
     //DEBUG
@@ -122,6 +126,19 @@ public class PlayerStress : MonoBehaviour
                 Stressor target = hit.GetComponent<Stressor>();
                 if (target != null)
                 {
+                    curStress = curStress + (target.stressorMultiplier * (Vector2.Distance(transform.position, target.transform.position))* Time.deltaTime) / 20f;
+                    print(curStress);
+                }
+            }
+        }
+        /*
+        if (gettingStressed)
+        {
+            foreach (Collider2D hit in hits)
+            {
+                Stressor target = hit.GetComponent<Stressor>();
+                if (target != null)
+                {
                     stressToAdd += target.stressorMultiplier * Vector2.Distance(transform.position, target.transform.position) / 20f;
                 }
             }
@@ -182,7 +199,9 @@ public class PlayerStress : MonoBehaviour
             stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
         }
 
+        //curve.
         //print(curReliefModifier);
+        */
     }
 
     private void GameOver()
