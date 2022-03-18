@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject dog;
 
+    public bool hasWon = false;
+    public bool hasLost = false;
+
     void Awake()
     {
         if (instance == null)
@@ -48,6 +51,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         
+    }
+
+    private void Update()
+    {
+        /*
+        // For quick testing
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            hasWon = true;
+        }
+        */
     }
 
     public void StartGame()
