@@ -2418,6 +2418,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8749231106162787040, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
 --- !u!1 &64261014
@@ -38241,6 +38245,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1888464454}
     - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
+    - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
+    - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
       propertyPath: interactionTransform
       value: 
       objectReference: {fileID: 1237338863}
@@ -40602,9 +40614,17 @@ PrefabInstance:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278370, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
+    - target: {fileID: 1301799649286278370, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: neededItem
       value: 
       objectReference: {fileID: 11400000, guid: 5f4b4ba628aec2e469c20e1955ac615f, type: 2}
+    - target: {fileID: 1301799649286278370, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
+      propertyPath: interactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
     - target: {fileID: 1301799649286278371, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 8
@@ -46782,6 +46802,14 @@ PrefabInstance:
       propertyPath: textMesh
       value: 
       objectReference: {fileID: 582296396}
+    - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
+    - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
+      propertyPath: pickUpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
     - target: {fileID: 2068006397959637752, guid: 53d0b0b81d4cad34c840ed5e8b91dedf, type: 3}
       propertyPath: interactionTransform
       value: 
@@ -60329,6 +60357,14 @@ PrefabInstance:
       propertyPath: questId
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1608151714, guid: 540ae0afc8827004ab35e421ff5e982e, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
+    - target: {fileID: 1608151714, guid: 540ae0afc8827004ab35e421ff5e982e, type: 3}
+      propertyPath: interactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
     - target: {fileID: 461293161114080512, guid: 540ae0afc8827004ab35e421ff5e982e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.45
@@ -61270,6 +61306,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 1990346242}
   canInteract: 0
   neededItem: {fileID: 11400000, guid: e844a5e28efec314fbde6074969bc53b, type: 2}
+  interactSound: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
 --- !u!212 &1990346241
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -61826,6 +61863,7 @@ MonoBehaviour:
   questId: 2
   isQuestOpen: 0
   questDescription: 
+  interactSound: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
 --- !u!114 &2004671990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64567,6 +64605,7 @@ MonoBehaviour:
   questId: 3
   isQuestOpen: 0
   questDescription: 
+  interactSound: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
 --- !u!1001 &2077824563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67402,6 +67441,14 @@ PrefabInstance:
       propertyPath: radius
       value: 0.42
       objectReference: {fileID: 0}
+    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
+    - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
+      propertyPath: interactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 8816bd0e27d894446a5cea1ea7d4a051, type: 3}
     - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: dogLocations.Array.size
       value: 3

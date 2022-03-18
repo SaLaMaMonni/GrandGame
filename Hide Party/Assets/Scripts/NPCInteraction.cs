@@ -22,6 +22,8 @@ public class NPCInteraction : Interactable
     public bool isQuestOpen = true;
     public string questDescription;
 
+    public AudioClip interactSound;
+
     private void Start()
     {
         inventory = Inventory.instance;
@@ -39,6 +41,8 @@ public class NPCInteraction : Interactable
         {
             dialogueTriggers[dialogueTriggers.Length - 1].TriggerDialogue();
         }
+
+        PlaySound();
     }
 
     void CheckAction()
@@ -109,5 +113,17 @@ public class NPCInteraction : Interactable
         interactionPhase = 2;
 
         QuestManager.Instance.OpenNextQuest();
+    }
+
+    public void PlaySound()
+    {
+        AudioSource source = gameObject.GetComponent<AudioSource>();
+
+        if (source == null)
+        {
+            source = gameObject.AddComponent<AudioSource>();
+        }
+
+        source.PlayOneShot(interactSound);
     }
 }

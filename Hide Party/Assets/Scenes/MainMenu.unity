@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911580754813748082, guid: 982253aeb9dbbbb4080fec375264a910, type: 3}
       propertyPath: m_text
-      value: Settings
+      value: Who r u?
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 982253aeb9dbbbb4080fec375264a910, type: 3}
