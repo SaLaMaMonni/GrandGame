@@ -9,6 +9,8 @@ public class Rack : Interactable
     [SerializeField] Item neededItem;
     bool hasNeededItem;
 
+    public AudioClip interactSound;
+
     void Start()
     {
         inventory = Inventory.instance;
@@ -49,5 +51,17 @@ public class Rack : Interactable
                 Debug.Log("You can't give a jacket to me?");
             }
         }
+    }
+
+    public void PlayPickUpSound()
+    {
+        AudioSource source = gameObject.GetComponent<AudioSource>();
+
+        if (source == null)
+        {
+            source = gameObject.AddComponent<AudioSource>();
+        }
+
+        source.PlayOneShot(interactSound);
     }
 }

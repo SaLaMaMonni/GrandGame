@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject dog;
 
+    public bool hasWon = false;
+    public bool hasLost = false;
+
     void Awake()
     {
         if (instance == null)
@@ -50,12 +53,25 @@ public class GameManager : MonoBehaviour
         
     }
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*
+        // For quick testing
+        if (Input.GetKeyDown(KeyCode.G))
         {
-            SceneManager.LoadScene(0);
+            hasWon = true;
         }
+        */
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void HideMatti()

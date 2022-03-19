@@ -92,6 +92,7 @@ public class QuestManager : MonoBehaviour
         else
         {
             Debug.Log("That was the last quest. Congratulations!");
+            GameManager.Instance.hasWon = true;
         }
     }
 }

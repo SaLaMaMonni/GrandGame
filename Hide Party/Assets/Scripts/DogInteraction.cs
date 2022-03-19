@@ -18,6 +18,8 @@ public class DogInteraction : Interactable
     bool firstPet = true;
     [SerializeField] GameObject jacket;
 
+    public AudioClip interactSound;
+
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
@@ -143,5 +145,17 @@ public class DogInteraction : Interactable
         {
             locations.Add(location.position);
         }
+    }
+
+    public void PlaySound()
+    {
+        AudioSource source = gameObject.GetComponent<AudioSource>();
+
+        if (source == null)
+        {
+            source = gameObject.AddComponent<AudioSource>();
+        }
+
+        source.PlayOneShot(interactSound);
     }
 }

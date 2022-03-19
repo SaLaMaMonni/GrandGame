@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemPickup : Interactable
 {
     public Item item;
+    public AudioClip pickUpSound;
 
     // Called when player interacts with an item
     public override void Interact()
@@ -23,7 +24,22 @@ public class ItemPickup : Interactable
 
         if(wasPickedUp)
         {
+            PlayPickUpSound();
             Destroy(gameObject);
         }
+    }
+
+    public void PlayPickUpSound()
+    {
+        AudioSource source = FindObjectOfType<PlayerMovement>().gameObject.GetComponent<AudioSource>();
+
+        //AudioSource source = gameObject.GetComponent<AudioSource>();
+
+        if (source == null)
+        {
+            source = gameObject.AddComponent<AudioSource>();
+        }
+
+        source.PlayOneShot(pickUpSound);
     }
 }
