@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float moveSpeed = 10f;
-    private Vector2 movement;
+    [HideInInspector]
+    public Vector2 movement;
 
     public bool isSlowed;
 
