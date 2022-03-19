@@ -8,8 +8,9 @@ public class Room_Controller : MonoBehaviour
     GameObject player;
     CurrentRoom playerRoom;
     Collider2D trigger;
+    SpriteRenderer[] floorsGraphics;
     //ContactFilter2D npcs;
-    SpriteRenderer floor;
+    //SpriteRenderer floor;
     //HouseManager manager;
     List<Display> hidden;
 
@@ -20,26 +21,27 @@ public class Room_Controller : MonoBehaviour
 
     private void Awake()
     {
-        floor = GetComponent<SpriteRenderer>();
+        //floor = GetComponent<SpriteRenderer>();
         trigger = GetComponent<Collider2D>();
         //manager = transform.parent.GetComponent<HouseManager>();
         player = GameObject.FindGameObjectWithTag("Player");
         playerRoom = player.GetComponent<CurrentRoom>();
-        floor.color = Color.black;
-        if(transform.childCount > 3)
+        //floor.color = Color.black;
+
+        int loops = transform.parent.childCount;
+        floorsGraphics = new SpriteRenderer[loops];
+
+        for(int fl = 0;fl < loops; fl++)
         {
-            int loops = transform.childCount;
+            SpriteRenderer floorSprite = transform.parent.GetChild(fl).GetComponent<SpriteRenderer>();
 
-            for(int extrafloor = 0;extrafloor < loops; extrafloor++)
+            if(floorSprite != null)
             {
-                SpriteRenderer floorSprite = transform.GetChild(extrafloor).GetComponent<SpriteRenderer>();
-
-                if(floorSprite != null)
-                {
-                    floorSprite.color = Color.black;
-                }
-
+                floorSprite.color = Color.black;
             }
+
+            floorsGraphics[fl] = floorSprite;
+
         }
         //npcs = new ContactFilter2D();
         //floor.sortingOrder = 100;
@@ -79,13 +81,19 @@ public class Room_Controller : MonoBehaviour
 
             if(!revealed)
             {
-                floor.color = Color.white;
-                //floor.sortingOrder = 0;
-                HouseManager.HM.Reveal(roomNumber);
-                foreach(Display h in hidden)
+                foreach (SpriteRenderer flo in floorsGraphics)
+                {
+                    flo.color = Color.white;
+                    //floor.sortingOrder = 0;
+                }
+
+                foreach (Display h in hidden)
                 {
                     h.Unhide();
                 }
+
+                HouseManager.HM.Reveal(roomNumber);
+
                 revealed = true;
             }
         }

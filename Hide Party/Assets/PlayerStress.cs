@@ -31,7 +31,7 @@ public class PlayerStress : MonoBehaviour
     [Range(0.1f, 10f)]
     public float stressSpeedModifier = 1f;
     public float stressMultiplier = 1.01f;
-    public float checkInterval = 2f;
+    public float checkInterval = 0.1f;
 
     bool gettingStressed;
     bool gettingRelief;
@@ -63,10 +63,10 @@ public class PlayerStress : MonoBehaviour
     {
         checkTimer = checkInterval;
         stressToAdd = 0f;
-        feetOffSet = new Vector2(0f, -1.8f);
+        //feetOffSet = new Vector2(0f, -1.8f);
         curStress = 0f;
-        curStressModifier = 1f;
-        curReliefModifier = 1f;
+        //curStressModifier = 1f;
+        //curReliefModifier = 1f;
         movement = GetComponent<PlayerMovement>();
     }
 
@@ -79,129 +79,16 @@ public class PlayerStress : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //--------fsfsdfsd--------------------------------------------------fsfdsfsdf---------------------------
         checkTimer -= Time.deltaTime;
-        if (checkTimer <= 0f)
+
+        if(checkTimer <= 0f)
         {
             checkTimer = checkInterval;
-            hits = Physics2D.OverlapCircleAll((Vector2)transform.position + feetOffSet, 1f,stressorsLayer);
 
-            // Parempi systeemi pitää olla, mutta alkaa mieliala murtuu.
-            float stressValue = 0f;
-            if(hits.Length > 0)
-            {
-                foreach (Collider2D hit in hits)
-                {
-                    Stressor target = hit.GetComponent<Stressor>();
-                    if(target != null)
-                    {
-                        stressValue += target.stressorMultiplier * Vector2.Distance(transform.position, target.transform.position);
-                        //print(stressValue);
-                    }
-                }
-
-                if(stressValue > 0f)
-                {
-                    curReliefModifier = 1f;
-                    gettingStressed = true;
-                    gettingRelief = false;
-                }
-
-                if(stressValue < 1f)
-                {
-                    gettingStressed = false;
-                    gettingRelief = true;
-                }
-            }
-            else
-            {
-                gettingRelief = false;
-                gettingStressed = false;
-            }
+            //Physics2D.OverlapCircleAll(transform.position,2)
         }
 
-        if (gettingStressed)
-        {
-            foreach (Collider2D hit in hits)
-            {
-                Stressor target = hit.GetComponent<Stressor>();
-                if (target != null)
-                {
-                    curStress = curStress + (target.stressorMultiplier * (Vector2.Distance(transform.position, target.transform.position))* Time.deltaTime) / 20f;
-                    print(curStress);
-                }
-            }
-        }
-        /*
-        if (gettingStressed)
-        {
-            foreach (Collider2D hit in hits)
-            {
-                Stressor target = hit.GetComponent<Stressor>();
-                if (target != null)
-                {
-                    stressToAdd += target.stressorMultiplier * Vector2.Distance(transform.position, target.transform.position) / 20f;
-                }
-            }
-
-            if (curStressModifier < 300f)
-            {
-                curStressModifier *= stressMultiplier;// * stressorCount;
-            }
-            curStress += (stressToAdd * curStressModifier * Time.deltaTime) * stressSpeedModifier;
-            //curStress += stressBarMask.localScale.x;
-            //if(Time.deltaTime > 0.0)
-            //print(Time.deltaTime);
-            //print(curStress-lastStress);
-            if(curStress > 1f)
-            {
-                curStress = 1f;
-                stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
-                GameOver();
-            }
-        }
-        else
-        {
-            if (curStressModifier > 1f)
-            {
-                curReliefModifier *= stressMultiplier;
-                curStressModifier -= curReliefModifier;
-            }
-            else
-            {
-                curStressModifier = 1f;
-            }
-        }
-        
-        if(!gettingStressed && gettingRelief)
-        {
-            foreach (Collider2D hit in hits)
-            {
-                Stressor target = hit.GetComponent<Stressor>();
-                if (target != null)
-                {
-                    stressToAdd += target.stressorMultiplier;
-                }
-            }
-
-            curStress += (stressToAdd * Time.deltaTime) * stressSpeedModifier;
-
-            if(curStress < 0f)
-            {
-                curStress = 0f;
-            }
-        }
-        //stressorCount = 0;
-        stressToAdd = 0f;
-
-
-        if(gettingStressed || gettingRelief)
-        {
-            stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
-        }
-
-        //curve.
-        //print(curReliefModifier);
-        */
     }
 
     private void GameOver()
@@ -212,12 +99,4 @@ public class PlayerStress : MonoBehaviour
         Destroy(this);
     }
 
-    /*
-    void OnDrawGizmosSelected()
-    {
-        // Draw a yellow sphere at the transform's position
-        Gizmos.color = new Color(1f, 0f, 0f, 0.5f);
-        Gizmos.DrawSphere(transform.position + new Vector3(0f,-1.8f,0f), 1f);
-    }
-    */
 }
