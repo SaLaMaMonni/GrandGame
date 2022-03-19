@@ -2506,6 +2506,10 @@ PrefabInstance:
       propertyPath: m_Volume
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8749231106162787040, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a25cadcbc0d2cb49b0ed0b8ea205d0f, type: 3}
 --- !u!1 &64261014
@@ -25701,7 +25705,7 @@ Transform:
   - {fileID: 392007951}
   - {fileID: 438054140}
   m_Father: {fileID: 142612933}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &776249722
 SpriteRenderer:
@@ -39403,6 +39407,9 @@ Transform:
   - {fileID: 1815247100}
   m_Father: {fileID: 880753017}
   m_RootOrder: 0
+=======
+  m_RootOrder: 27
+>>>>>>> main
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1234520856
 GameObject:
