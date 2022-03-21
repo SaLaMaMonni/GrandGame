@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 256083358344086168
     second: "Pitk\xE4k\xE4yt\xE4v\xE4SEIN\xC4_taka_2"
+  - first:
+      213: -7778313652204866316
+    second: "Pitk\xE4k\xE4yt\xE4v\xE4SEIN\xC4_taka_3"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +108,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 64
-        width: 320
+        width: 132
         height: 64
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -158,6 +161,27 @@ TextureImporter:
       bones: []
       spriteID: 8920df6257acd8300800000000000000
       internalID: 256083358344086168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Pitk\xE4k\xE4yt\xE4v\xE4SEIN\xC4_taka_3"
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 64
+        width: 188
+        height: 64
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f4f1c0d1f0ed0490800000000000000
+      internalID: -7778313652204866316
       vertices: []
       indices: 
       edges: []
