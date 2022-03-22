@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6623504542662859724}
   - component: {fileID: 7055773122767073223}
   - component: {fileID: 6694408273107625942}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC_Male4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 8595117583255567692, guid: 99f00a46b8da46d44a75b58e75c8bb77, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}

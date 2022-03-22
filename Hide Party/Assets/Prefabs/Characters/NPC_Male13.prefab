@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4096175598666683825}
   - component: {fileID: 8842055889183514480}
   - component: {fileID: 1343786651127876426}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC_Male13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &4096175598666683825
 Animator:
   serializedVersion: 3

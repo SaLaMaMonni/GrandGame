@@ -5,6 +5,7 @@ using UnityEngine;
 public class Display : MonoBehaviour
 {
     SpriteRenderer renderer;
+    bool hidden = false;
 
     private void Awake()
     {
@@ -14,15 +15,23 @@ public class Display : MonoBehaviour
 
     public void Hide()
     {
-        Color col = renderer.color;
-        col.a = 0f;
-        renderer.color = col;
+        if (!hidden)
+        {
+            Color col = renderer.color;
+            col.a = 0f;
+            renderer.color = col;
+            hidden = true;
+        }
     }
 
     public void Unhide()
     {
-        Color col = renderer.color;
-        col.a = 1f;
-        renderer.color = col;
+        if (hidden)
+        {
+            Color col = renderer.color;
+            col.a = 1f;
+            renderer.color = col;
+            hidden = false;
+        }
     }
 }

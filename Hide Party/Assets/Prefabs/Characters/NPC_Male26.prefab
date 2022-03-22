@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8157138402781976635}
   - component: {fileID: 8157138402781976634}
   - component: {fileID: 8157138402781976633}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC_Male26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: -3903871791098970172, guid: f32b4f456a73f1b42a9680aa15401695, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!95 &8157138402781976633
 Animator:
   serializedVersion: 3

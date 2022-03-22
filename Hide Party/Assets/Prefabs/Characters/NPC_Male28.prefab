@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4959356785923050204}
   - component: {fileID: 4959356785923050205}
   - component: {fileID: 4959356785923050202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NPC_Male28
   m_TagString: Untagged
   m_Icon: {fileID: 0}

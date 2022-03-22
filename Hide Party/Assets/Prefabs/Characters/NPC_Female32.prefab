@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2593707833678783882}
   - component: {fileID: 2593707833678783883}
   - component: {fileID: 2593707833678783880}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC_Female32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 1854471981115280045, guid: dcbbbe6e355f0844c95a64a6f2cacb43, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 2}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6977075066347314376}
   - component: {fileID: 6538475444065897575}
   - component: {fileID: 7225193856357925387}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NPC_Female19
   m_TagString: Untagged
   m_Icon: {fileID: 0}

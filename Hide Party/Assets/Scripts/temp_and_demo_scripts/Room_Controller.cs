@@ -9,7 +9,7 @@ public class Room_Controller : MonoBehaviour
     CurrentRoom playerRoom;
     Collider2D trigger;
     SpriteRenderer[] floorsGraphics;
-    //ContactFilter2D npcs;
+    ContactFilter2D npcs;
     //SpriteRenderer floor;
     //HouseManager manager;
     List<Display> hidden;
@@ -31,11 +31,11 @@ public class Room_Controller : MonoBehaviour
         int loops = transform.parent.childCount;
         floorsGraphics = new SpriteRenderer[loops];
 
-        for(int fl = 0;fl < loops; fl++)
+        for (int fl = 0; fl < loops; fl++)
         {
             SpriteRenderer floorSprite = transform.parent.GetChild(fl).GetComponent<SpriteRenderer>();
 
-            if(floorSprite != null)
+            if (floorSprite != null)
             {
                 floorSprite.color = Color.black;
             }
@@ -43,43 +43,67 @@ public class Room_Controller : MonoBehaviour
             floorsGraphics[fl] = floorSprite;
 
         }
-        //npcs = new ContactFilter2D();
+        npcs = new ContactFilter2D();
         //floor.sortingOrder = 100;
     }
 
     private void Start()
     {
-        List<Collider2D> inRoom = new List<Collider2D>();
-        //LayerMask npcMask = new LayerMask();
+
+        LayerMask npcMask = new LayerMask();
         //npcMask |= (1 << LayerMask.NameToLayer("Crowd"));
-        //npcMask |= (1 << LayerMask.NameToLayer("NPC"));
-        trigger.OverlapCollider(new ContactFilter2D(), inRoom);
-        hidden = new List<Display>();
+        npcMask |= (1 << LayerMask.NameToLayer("NPC"));
+        npcs.layerMask = npcMask;
+        npcs.useTriggers = false;
 
-        foreach(Collider2D found in inRoom)
+        //hidden = new List<Display>();
+
+        Hide();
+    }
+
+    private void Hide()
+    {
+        List<Collider2D> inRoom = new List<Collider2D>();
+        trigger.OverlapCollider(npcs, inRoom);
+
+        foreach (Collider2D found in inRoom)
         {
-            if(found.gameObject.layer != 12)
-            {
-                Display hider = found.GetComponent<Display>();
+            Display hider = found.GetComponent<Display>();
 
-                if(hider != null)
-                {
-                    hider.Hide();
-                    hidden.Add(hider);
-                }
+            if (hider != null)
+            {
+                hider.Hide();
+                //hidden.Add(hider);
+            }
+        }
+    }
+
+    private void Reveal()
+    {
+        List<Collider2D> inRoom = new List<Collider2D>();
+        trigger.OverlapCollider(npcs, inRoom);
+
+        foreach (Collider2D found in inRoom)
+        {
+            Display hider = found.GetComponent<Display>();
+
+            if (hider != null)
+            {
+                hider.Unhide();
+                //hidden.Add(hider);
             }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!playerInRoom && collision.gameObject == player)
+        if (!playerInRoom && collision.gameObject == player)
         {
             playerInRoom = true;
             playerRoom.number = roomNumber;
             HouseManager.HM.Activate(roomNumber);
 
-            if(!revealed)
+            if (!revealed)
             {
                 foreach (SpriteRenderer flo in floorsGraphics)
                 {
@@ -87,27 +111,26 @@ public class Room_Controller : MonoBehaviour
                     //floor.sortingOrder = 0;
                 }
 
-                foreach (Display h in hidden)
-                {
-                    h.Unhide();
-                }
+                Reveal();
 
                 HouseManager.HM.Reveal(roomNumber);
 
                 revealed = true;
             }
         }
-        else if(collision.gameObject.tag == "NPC")
+        else if (collision.gameObject.tag == "NPC")
         {
-            SpriteRenderer npc = collision.gameObject.GetComponent<SpriteRenderer>();
-            if (!revealed)
+            Display view = collision.GetComponent<Display>();
+            
+            if (revealed)
             {
-                npc.color = new Color(1f,1f,1f,0f);
+                view.Unhide();
             }
             else
             {
-                npc.color = new Color(1f, 1f, 1f, 1f);
+                view.Hide();
             }
+
         }
     }
 
@@ -118,8 +141,10 @@ public class Room_Controller : MonoBehaviour
             playerInRoom = false;
             HouseManager.HM.Deactivate(roomNumber);
         }
+        //else if (collision.gameObject.tag == "NPC" && !revealed)
+        //{
+        //    SpriteRenderer npc = collision.gameObject.GetComponent<SpriteRenderer>();
+        //    npc.color = new Color(1f, 1f, 1f, 1f);
+        //}
     }
-
-
-
 }
