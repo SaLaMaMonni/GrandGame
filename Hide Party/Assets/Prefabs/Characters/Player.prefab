@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 8749231106162787040}
   m_Layer: 3
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,6 +138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 10
+  movement: {x: 0, y: 0}
   isSlowed: 0
   slowedPercent: 0.2
 --- !u!114 &7540190927905600762

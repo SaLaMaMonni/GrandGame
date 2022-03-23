@@ -29,20 +29,20 @@ using UnityEngine;
 public class PlayerStress : MonoBehaviour
 {
     [Range(0.1f, 10f)]
-    public float stressSpeedModifier = 1f;
-    public float stressMultiplier = 1.01f;
-    public float checkInterval = 0.1f;
+    public float universalStressSpeed = 1f;
+    //public float stressMultiplier = 1.01f;
+    //public float checkInterval = 0.1f;
 
     bool gettingStressed;
     bool gettingRelief;
-    Vector2 feetOffSet;
+    //Vector2 feetOffSet;
     float curStress;
-    float curStressModifier;
-    float curReliefModifier;
-    int stressorCount;
-    float stressToAdd;
+    //float curStressModifier;
+    //float curReliefModifier;
+    //int stressorCount;
+    //float stressToAdd;
 
-    float checkTimer;
+    //float checkTimer;
 
     public Transform stressBarMask;
 
@@ -61,13 +61,13 @@ public class PlayerStress : MonoBehaviour
 
     private void Awake()
     {
-        checkTimer = checkInterval;
-        stressToAdd = 0f;
+        //checkTimer = checkInterval;
+        //tressToAdd = 0f;
         //feetOffSet = new Vector2(0f, -1.8f);
         curStress = 0f;
         //curStressModifier = 1f;
         //curReliefModifier = 1f;
-        movement = GetComponent<PlayerMovement>();
+        //movement = GetComponent<PlayerMovement>();
     }
 
     // Start is called before the first frame update
@@ -76,21 +76,76 @@ public class PlayerStress : MonoBehaviour
         stressorsLayer = LayerMask.GetMask("NPC","StressRelief");
     }
 
-    // Update is called once per frame
+    public void AdjustStress(float adjustment, float rampMult)
+    {
+        /*
+        float dir;
+        if(adjustment > 0f)
+        {
+            dir = 1;
+        }
+        else
+        {
+            dir = -1;
+        }
+
+        curStress +=  curve.Evaluate(adjustment) * dir;
+        */
+
+        // Ramp
+        if (rampMult < 1f && rampMult > 0f)
+        {
+            curStress += (curve.Evaluate(rampMult) * adjustment) * universalStressSpeed * 0.05f * Time.deltaTime;
+        }
+        // Raw
+        else
+        {
+            // Voiko raaka lukua käyttää? Kyllä kai? Pakko, kun käyrä voi olla vaan 0 ja 1 välillä ni melkeen sama mutta isommilla nopeuksilla.
+            curStress += universalStressSpeed * 0.05f * adjustment * Time.deltaTime;
+        }
+        
+        
+        if(curStress > 1f)
+        {
+            stressBarMask.localScale = new Vector3(1f, 1f, 1f);
+            GameOver();
+        }
+        else
+        {
+            stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
+        }
+    }
+
+
+    //Update is called once per frame
+    /*
     void Update()
     {
+        
         //--------fsfsdfsd--------------------------------------------------fsfdsfsdf---------------------------
         checkTimer -= Time.deltaTime;
 
         if(checkTimer <= 0f)
         {
-            checkTimer = checkInterval;
+            // Ei nollata niin on tarkempi average.
+            checkTimer += checkInterval;
 
-            //Physics2D.OverlapCircleAll(transform.position,2)
+            Collider2D[] stressors = Physics2D.OverlapCircleAll(transform.position, 2f, stressorsLayer);
+
+            foreach(Collider2D modifier in stressors)
+            {
+                if (Physics2D.Raycast(transform.position, transform.position - modifier.transform.position))
+                {
+                    Stressor stress = modifier.GetComponent<Stressor>();
+
+                    curStress += curve.Evaluate(stress.ReturnStressAmount());
+                    print(curStress);
+                }
+            }
         }
-
+        
     }
-
+    */
     private void GameOver()
     {
         print("I'm outta here!");
