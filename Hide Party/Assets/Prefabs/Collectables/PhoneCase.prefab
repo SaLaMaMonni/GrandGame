@@ -101,6 +101,7 @@ MonoBehaviour:
   interactionTransform: {fileID: 4033636867349263499}
   canInteract: 0
   item: {fileID: 11400000, guid: 060001a5f13ffad408801fccd8b93d7e, type: 2}
+  pickUpSound: {fileID: 8300000, guid: 181dc8240e81a6647979c89b849af8f4, type: 3}
 --- !u!1001 &7443125571752348674
 PrefabInstance:
   m_ObjectHideFlags: 0

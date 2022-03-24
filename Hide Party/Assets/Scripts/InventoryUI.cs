@@ -18,11 +18,6 @@ public class InventoryUI : MonoBehaviour
         slots = itemsParent.GetComponentsInChildren<InventorySlot>();
     }
 
-    void Update()
-    {
-        
-    }
-
     // Updates the UI.
     // Thanks to the delegate, updates the UI whenever something happens in inventory
     void UpdateUI()

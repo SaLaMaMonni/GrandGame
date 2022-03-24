@@ -46,11 +46,13 @@ public class QuestManager : MonoBehaviour
 
     void Start()
     {
-        OrganizeQuests();
+        //OrganizeQuests();
     }
 
-    void OrganizeQuests()
+    public void OrganizeQuests()
     {
+        currentQuest = 1;
+
         NPCInteraction[] tempList = FindObjectsOfType<NPCInteraction>();
         quests = new NPCInteraction[tempList.Length + 1];
 

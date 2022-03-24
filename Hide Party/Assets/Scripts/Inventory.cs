@@ -41,7 +41,7 @@ public class Inventory : MonoBehaviour
     public delegate void OnItemChanged();
     public OnItemChanged onItemChangedCallback;
 
-    public int space = 20;
+    public int space = 5;
 
     public List<Item> items = new List<Item>();
 
@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        Add(jacket);        // Adds the first quest's jacket to inventory at the start.
+        //Add(jacket);        // Adds the first quest's jacket to inventory at the start.
     }
 
     public bool Add(Item item)
@@ -79,5 +79,11 @@ public class Inventory : MonoBehaviour
         {
             onItemChangedCallback.Invoke();
         }
+    }
+
+    public void RestartInventory()
+    {
+        items = new List<Item>();
+        Add(jacket);
     }
 }

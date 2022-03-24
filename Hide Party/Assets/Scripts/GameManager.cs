@@ -90,4 +90,11 @@ public class GameManager : MonoBehaviour
     {
         dog.SetActive(true);
     }
+
+    public void NewGameSetUp()
+    {
+        mattiObject = GameObject.Find("Matti").GetComponent<NPCInteraction>();
+        dog = GameObject.Find("Dog");
+        dog.SetActive(false);
+    }
 }
