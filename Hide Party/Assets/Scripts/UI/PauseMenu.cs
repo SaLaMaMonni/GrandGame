@@ -15,7 +15,14 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            PauseGame();
+            if (!GameManager.Instance.hasWon && !GameManager.Instance.hasLost)
+            {
+                PauseGame();
+            }
+            else
+            {
+                GameManager.Instance.QuitGame();
+            }
         }
     }
 
@@ -33,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ToMainMenu()
     {
-        GameManager.Instance.LoadMainMenu();
+        Debug.Log("Quit pressed");
+        Application.Quit();
     }
 }

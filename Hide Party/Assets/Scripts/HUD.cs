@@ -6,6 +6,7 @@ using TMPro;
 public class HUD : MonoBehaviour
 {
     public TMP_Text gameStatus;
+    public GameObject hud;
     private GameManager manager;
 
     void Start()
@@ -15,19 +16,25 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        UpdateText();
+        if (GameManager.Instance.hasLost || GameManager.Instance.hasWon)
+        {
+            UpdateText();
+        }
     }
 
     void UpdateText()
     {
+        hud.SetActive(true);
+
         if (manager.hasWon)
         {
-            gameStatus.text = "You've beaten the demo, congratulations! Press ESC to access pause menu";
+            gameStatus.text = "You've beaten the demo, congratulations! Press ESC to quit";
         }
 
         if (manager.hasLost)
         {
-            gameStatus.text = "You got overwhelmed with anxiety. You can always try again! Press ESC to access pause menu";
+            gameStatus.text = "You got overwhelmed with anxiety and because of that, you're shutting down. " +
+                "You can always try again, just be more careful. Press ESC to exit";
         }
     }
 }

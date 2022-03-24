@@ -5,10 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    public GameObject menu;
+
     public void StartGame()
     {
-        Debug.Log("Play pressed");
-        GameManager.Instance.StartGame();
+        menu.SetActive(false);
         Time.timeScale = 1f;
     }
 

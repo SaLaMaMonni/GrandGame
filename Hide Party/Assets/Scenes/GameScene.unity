@@ -8754,6 +8754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d62fe450a2c4edf449d66ebbf5a65802, type: 3}
+--- !u!1 &181035505 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 858908525439199731, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+  m_PrefabInstance: {fileID: 1415257209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &188215553
 GameObject:
   m_ObjectHideFlags: 0
@@ -25319,6 +25324,11 @@ Transform:
   m_Father: {fileID: 1276138169}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &658038662 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5594067285535337744, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+  m_PrefabInstance: {fileID: 1415257209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &659178051 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1987350499309136471, guid: e5db7bff8cbee1845b0f1da6c35e3ba7, type: 3}
@@ -29789,6 +29799,10 @@ PrefabInstance:
       propertyPath: dog
       value: 
       objectReference: {fileID: 984434973}
+    - target: {fileID: 3306956109446390021, guid: 870d8373389298f438ea1030e1420ac4, type: 3}
+      propertyPath: blackout
+      value: 
+      objectReference: {fileID: 658038662}
     - target: {fileID: 3306956109446390021, guid: 870d8373389298f438ea1030e1420ac4, type: 3}
       propertyPath: mattiObject
       value: 
@@ -39655,6 +39669,11 @@ Transform:
   m_Father: {fileID: 72079103}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1015249105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 412510088, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+  m_PrefabInstance: {fileID: 1415257209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1015471344
 GameObject:
   m_ObjectHideFlags: 0
@@ -46617,7 +46636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1224646900
 Transform:
   m_ObjectHideFlags: 0
@@ -49725,11 +49744,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278368, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7
+      value: 4.02
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278368, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.13
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278368, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -49769,7 +49788,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278370, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: radius
-      value: 0.5
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278370, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: audioClip
@@ -49803,7 +49822,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278371, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: dialogue.sentences.Array.data[3]
-      value: You should probably first go and take your jacket to room X.
+      value: You should probably first go and take your jacket to the living room.
+        It's just across the hall when you exit this room.
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278371, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
@@ -49812,7 +49832,7 @@ PrefabInstance:
     - target: {fileID: 1301799649286278371, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
       value: There's a lot of people partying in the kitchen and in the living room
-        so try to avoid going there for now.
+        so watch out for yourself.
       objectReference: {fileID: 0}
     - target: {fileID: 1301799649286278371, guid: e54d9a1d2845a104c9b72bcf3427023d, type: 3}
       propertyPath: dialogue.sentences.Array.data[6]
@@ -53707,6 +53727,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 412510088, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1415257213, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: hud
+      value: 
+      objectReference: {fileID: 1015249105}
+    - target: {fileID: 1844953757, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 130
+      objectReference: {fileID: 0}
     - target: {fileID: 843733275805718211, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -53819,6 +53851,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 858908525439199731, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 884539827715893328, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1415257212}
     - target: {fileID: 4742750431014555958, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -53915,12 +53955,38 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5594067285535337744, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6772216318662585216, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1415257212}
     - target: {fileID: 8910378375980509025, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+--- !u!1 &1415257211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 843733276803219145, guid: 32e3bff2dbeb72d45826dc28f3c8d871, type: 3}
+  m_PrefabInstance: {fileID: 1415257209}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1415257212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1415257211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1463d98a1ef89784fa862c632ef3a4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 181035505}
 --- !u!1 &1415865977
 GameObject:
   m_ObjectHideFlags: 0
@@ -58098,6 +58164,7 @@ Transform:
   - {fileID: 1459936699}
   - {fileID: 1879861052}
   - {fileID: 1695167222}
+  - {fileID: 1990346242}
   m_Father: {fileID: 751295792}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69395,7 +69462,6 @@ Transform:
   m_Children:
   - {fileID: 1508320089}
   - {fileID: 1237338863}
-  - {fileID: 1990346242}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74354,12 +74420,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990346239}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.18, y: 4.33, z: 0}
+  m_LocalPosition: {x: 17.33, y: -10.41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1956357841}
-  m_Father: {fileID: 1852635308}
-  m_RootOrder: 2
+  m_Father: {fileID: 1538335973}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1992866043
 GameObject:
@@ -74901,7 +74967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30e7c579bc288c94a9738e09629c8119, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0.5
+  radius: 0.75
   textMesh: {fileID: 1739745183}
   interactionTransform: {fileID: 755778112}
   canInteract: 0
@@ -74965,7 +75031,7 @@ MonoBehaviour:
     - Yo, what's up? Did you find them?
     - You only found his phone case? Darn, now his phone will be even harder to find.
     - You should ask Carla for help, she knows a lot about phones.
-    - She has red hair and blue eyes you will never forget.
+    - She has long pink hair and blue eyes you will never forget.
 --- !u!114 &2004671993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81798,7 +81864,7 @@ PrefabInstance:
       objectReference: {fileID: 876329674743014814, guid: 5999df26204ec1544a52cfd4b6f9b71f, type: 3}
     - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: radius
-      value: 0.42
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 7464624606953998793, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: audioClip
@@ -81874,7 +81940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7464624606953998805, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d24dd6c2139efe4a933445f8803970a, type: 3}
@@ -82276,7 +82342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4365921919104489894}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8, y: 4.2, z: 0}
+  m_LocalPosition: {x: 2.6600003, y: 2.9399996, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 774368026}

@@ -53,8 +53,8 @@ public class PlayerStress : MonoBehaviour
     int stressorsLayer;
 
     public AnimationCurve curve;
-    
 
+    private bool lost;
 
     //DEBUG
     float lastStress = 0f;
@@ -67,7 +67,7 @@ public class PlayerStress : MonoBehaviour
         curStress = 0f;
         //curStressModifier = 1f;
         //curReliefModifier = 1f;
-        //movement = GetComponent<PlayerMovement>();
+        movement = GetComponent<PlayerMovement>();
     }
 
     // Start is called before the first frame update
@@ -108,7 +108,11 @@ public class PlayerStress : MonoBehaviour
         if(curStress > 1f)
         {
             stressBarMask.localScale = new Vector3(1f, 1f, 1f);
-            GameOver();
+
+            if (!GameManager.Instance.hasLost && !lost)
+            {
+                GameOver();
+            }
         }
         else
         {
@@ -148,8 +152,11 @@ public class PlayerStress : MonoBehaviour
     */
     private void GameOver()
     {
+        lost = true;
+
         print("I'm outta here!");
         movement.enabled = false;
+        GameManager.Instance.GameOver();
         GetComponent<SpriteRenderer>().enabled = false;
         Destroy(this);
     }

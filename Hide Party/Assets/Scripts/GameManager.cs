@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public bool hasWon = false;
     public bool hasLost = false;
 
+    public GameObject blackout;
+
     void Awake()
     {
         if (instance == null)
@@ -46,11 +48,6 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    void Start()
-    {
-        
     }
 
     private void Update()
@@ -72,6 +69,12 @@ public class GameManager : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit pressed");
+        Application.Quit();
     }
 
     public void HideMatti()
@@ -96,5 +99,12 @@ public class GameManager : MonoBehaviour
         mattiObject = GameObject.Find("Matti").GetComponent<NPCInteraction>();
         dog = GameObject.Find("Dog");
         dog.SetActive(false);
+    }
+
+    public void GameOver()
+    {
+        hasLost = true;
+        blackout.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

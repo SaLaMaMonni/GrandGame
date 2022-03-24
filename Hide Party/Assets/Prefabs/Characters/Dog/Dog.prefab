@@ -76,7 +76,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &7464624606483506890
 MonoBehaviour:
@@ -297,6 +297,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   jacket: {fileID: 0}
+  interactSound: {fileID: 0}
 --- !u!114 &3616543751564091283
 MonoBehaviour:
   m_ObjectHideFlags: 0

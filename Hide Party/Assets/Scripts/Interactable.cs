@@ -17,7 +17,7 @@ public class Interactable : MonoBehaviour
 
     private bool checkRadius;
     private float checkTimer = 0f;
-    private float checkInterval = 0.5f;
+    private float checkInterval = 0.2f;
 
     private void Start()
     {

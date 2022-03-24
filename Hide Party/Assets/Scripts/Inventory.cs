@@ -49,7 +49,7 @@ public class Inventory : MonoBehaviour
 
     private void Start()
     {
-        //Add(jacket);        // Adds the first quest's jacket to inventory at the start.
+        Add(jacket);        // Adds the first quest's jacket to inventory at the start.
     }
 
     public bool Add(Item item)
