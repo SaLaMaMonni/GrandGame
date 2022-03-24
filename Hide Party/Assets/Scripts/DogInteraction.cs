@@ -10,6 +10,8 @@ public class DogInteraction : Interactable
 
     public float speed;
     private bool onTheMove = false;
+    bool currentlyPetting = false;
+    PlayerStress stress;
 
     [SerializeField] Transform[] dogLocations;
     List<Vector3> locations;
@@ -23,6 +25,7 @@ public class DogInteraction : Interactable
     void Start()
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
+        stress = player.GetComponent<PlayerStress>();
 
         animator = GetComponent<Animator>();
 
@@ -40,6 +43,11 @@ public class DogInteraction : Interactable
         if (onTheMove)
         {
             transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+
+        if (currentlyPetting)
+        {
+            stress.AdjustStress(-2f, 1f);
         }
     }
 
@@ -61,6 +69,7 @@ public class DogInteraction : Interactable
         GameManager.Instance.isInteracting = true;
         player.GetComponent<Renderer>().enabled = false;
         animator.SetTrigger("pet");
+        currentlyPetting = true;
     }
 
     // Dog will walk away after petting is done.
@@ -76,6 +85,7 @@ public class DogInteraction : Interactable
 
         player.GetComponent<Renderer>().enabled = true;
         onTheMove = true;
+        currentlyPetting = false;
     }
 
     // Finds a new random location for the dog and teleports it there.

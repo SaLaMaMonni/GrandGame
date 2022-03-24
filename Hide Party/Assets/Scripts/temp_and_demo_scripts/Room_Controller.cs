@@ -118,7 +118,7 @@ public class Room_Controller : MonoBehaviour
                 revealed = true;
             }
         }
-        else if (collision.gameObject.tag == "NPC")
+        else if (collision.gameObject.tag == "NPC" && !collision.isTrigger)
         {
             Display view = collision.GetComponent<Display>();
             
