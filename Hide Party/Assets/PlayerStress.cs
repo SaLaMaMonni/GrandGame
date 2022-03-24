@@ -109,15 +109,19 @@ public class PlayerStress : MonoBehaviour
         {
             stressBarMask.localScale = new Vector3(1f, 1f, 1f);
 
+            curStress = 1f;
             if (!GameManager.Instance.hasLost && !lost)
             {
                 GameOver();
             }
         }
-        else
+        else if (curStress < 0f)
         {
-            stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
+            curStress = 0f;
         }
+
+        stressBarMask.localScale = new Vector3(curStress, 1f, 1f);
+
     }
 
 
