@@ -47,7 +47,7 @@ public class DogInteraction : Interactable
 
         if (currentlyPetting)
         {
-            stress.AdjustStress(-2f, 1f);
+            stress.AdjustStress(-1.1f, 1f);
         }
     }
 

@@ -13,6 +13,7 @@ public class Stressor : MonoBehaviour
     Transform player;
     PlayerStress pStress;
     bool active;
+    bool playerLeft;
     //LayerMask playerMask;
 
     private void Awake()
@@ -40,7 +41,7 @@ public class Stressor : MonoBehaviour
                 // Inverse luku eli jos nolla niin 1 ja jos ulkoreunassa eli 2.1 niin nolla
                 AdjustStressAmount(1f - (dist / deactivateDistance));
             }
-            else
+            else if(dist > deactivateDistance && playerLeft)
             {
                 active = false;
                 //print("DEACTIVATED.");
@@ -57,7 +58,16 @@ public class Stressor : MonoBehaviour
         if (!active && collision.transform == player)
         {
             active = true;
+            playerLeft = false;
             //print("ACTIVATED");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (!active && collision.transform == player)
+        {
+            playerLeft = true;
         }
     }
 

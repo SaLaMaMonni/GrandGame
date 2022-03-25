@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -2991,7 +2991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -5729,8 +5729,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 110388915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38, y: 4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.5, y: -6.15, z: 0}
+  m_LocalScale: {x: 1.5, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1167617264}
   m_RootOrder: 4
@@ -7139,6 +7139,7 @@ MonoBehaviour:
     - {fileID: 1388776322}
     - {fileID: 1717372143}
     - {fileID: 962437659}
+    - {fileID: 1167617264}
     background:
     - {fileID: 698431492}
     furniture: {fileID: 736513323}
@@ -10557,7 +10558,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.18, y: -2.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10568,7 +10569,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 6}
+  m_Size: {x: 40, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &223895072
 GameObject:
@@ -10706,7 +10707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -11774,88 +11775,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2555496409941290798, guid: 5a28d906dfbb0844ebbb34417f4cdcbf, type: 3}
   m_PrefabInstance: {fileID: 269250152}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &273727616
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 273727618}
-  - component: {fileID: 273727617}
-  m_Layer: 0
-  m_Name: "wck\xE4yt\xE4v\xE4nkorkeusSEIN\xC4 (1)"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &273727617
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273727616}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea59f90734cbd2f489b4ea93019839b7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 4, y: 20}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &273727618
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273727616}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.21353, y: 3.9984455, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1167617264}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &277869470
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12574,7 +12493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -13122,7 +13041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -13265,7 +13184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -16262,7 +16181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -18318,7 +18237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -22057,7 +21976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -23025,7 +22944,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 7658da8b97c3ca548adaf1c2205502ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -23045,7 +22964,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582679674}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.050003, y: 10.370003, z: 0}
+  m_LocalPosition: {x: -1.550003, y: 0.1, z: 0}
   m_LocalScale: {x: 0.41447794, y: 0.6540225, z: 1}
   m_Children: []
   m_Father: {fileID: 1167617264}
@@ -23971,7 +23890,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -24562,7 +24481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -25804,7 +25723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -26000,7 +25919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 660564323}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.02, y: -0.20000076, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.049999237, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -26870,7 +26789,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681461140}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.069999695, y: 2.5499992, z: 0}
+  m_LocalPosition: {x: 0.069999695, y: 2.7999992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -27498,7 +27417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689907776}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.699997, y: 1.0499992, z: 0}
+  m_LocalPosition: {x: -3.699997, y: 1.2999992, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -29105,7 +29024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725161099}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 96, y: 17, z: 0}
+  m_LocalPosition: {x: 96, y: 16.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1853052486}
@@ -35475,7 +35394,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 875469812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.699997, y: 0.23999977, z: 0}
+  m_LocalPosition: {x: -3.699997, y: 0.48999977, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -36798,7 +36717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -38851,7 +38770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -41265,7 +41184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -42385,7 +42304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -45094,6 +45013,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1167617264}
+  - component: {fileID: 1167617266}
+  - component: {fileID: 1167617265}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -45109,7 +45030,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167617263}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4, y: 17, z: 0}
+  m_LocalPosition: {x: -35.5, y: 27.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1928782670}
@@ -45117,10 +45038,46 @@ Transform:
   - {fileID: 1899726622}
   - {fileID: 1665506135}
   - {fileID: 110388917}
-  - {fileID: 273727618}
   m_Father: {fileID: 2038403743}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1167617265
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167617263}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.5, y: -0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!210 &1167617266
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167617263}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
 --- !u!1 &1168574303
 GameObject:
   m_ObjectHideFlags: 0
@@ -47051,7 +47008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f545cf9c9e53647b194bd9663161fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  universalStressSpeed: 1
+  universalStressSpeed: 3
   stressBarMask: {fileID: 1114700746}
   hasCurve: 1
   curve:
@@ -47923,7 +47880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -51611,7 +51568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341786247}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0800018, y: 0.75, z: 0}
+  m_LocalPosition: {x: -2.0800018, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -52322,7 +52279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -57529,7 +57486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -57768,6 +57725,10 @@ PrefabInstance:
     - target: {fileID: 4907412691808472967, guid: 0cc12bbdc8e3d554f815af51f709046e, type: 3}
       propertyPath: m_LocalScale.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907412692563393056, guid: 0cc12bbdc8e3d554f815af51f709046e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 4907412692563393057, guid: 0cc12bbdc8e3d554f815af51f709046e, type: 3}
       propertyPath: m_RootOrder
@@ -61680,7 +61641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -63445,7 +63406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -63571,7 +63532,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 364048057650e1c4ca94b8e8c26694f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -63591,7 +63552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1665506133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -41.028, y: 10.896, z: 0}
+  m_LocalPosition: {x: -1.5279999, y: 0.62599754, z: 0}
   m_LocalScale: {x: 0.3294, y: 0.21319866, z: 1}
   m_Children: []
   m_Father: {fileID: 1167617264}
@@ -63994,7 +63955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -64046,7 +64007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -64223,7 +64184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -65567,7 +65528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -68249,7 +68210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -70762,7 +70723,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853052485}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 725161100}
@@ -71383,7 +71344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -72623,7 +72584,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 89d7627ad75ce174b90e4f264cce1643, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -72643,7 +72604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899726620}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -37.321, y: 10.845001, z: 0}
+  m_LocalPosition: {x: 2.1790009, y: 0.57499886, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1167617264}
@@ -73287,7 +73248,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 6a11752518649bf45b3897dd498ac810, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -73307,7 +73268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928782668}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -39.08, y: 12.02, z: 0}
+  m_LocalPosition: {x: 0.41999817, y: 1.7499981, z: 0}
   m_LocalScale: {x: 1.0921168, y: 0.9452547, z: 1}
   m_Children: []
   m_Father: {fileID: 1167617264}
@@ -74482,7 +74443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -76305,7 +76266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -77153,33 +77114,33 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -55.404747, y: 32.259644}
-      - {x: -55.109604, y: -25.56144}
-      - {x: -37.907143, y: -25.907694}
-      - {x: -37.385162, y: -31.872856}
-      - {x: -31.067595, y: -32.088894}
-      - {x: -30.49557, y: -2.2139626}
-      - {x: -9.775431, y: -2.0878143}
-      - {x: -9.421324, y: -21.487967}
-      - {x: -5.2072887, y: -21.36295}
-      - {x: -4.8446083, y: -7.2791843}
-      - {x: 4.63591, y: -7.3566513}
-      - {x: 9.163984, y: -1.888813}
-      - {x: 20.191437, y: -1.8363571}
-      - {x: 22.419346, y: -7.558815}
-      - {x: 34.42102, y: -7.648655}
-      - {x: 35.087967, y: -15.631168}
-      - {x: 74.67117, y: -15.894382}
-      - {x: 74.712166, y: -26.120638}
-      - {x: 93.22726, y: -26.147415}
-      - {x: 93.03722, y: -21.90954}
-      - {x: 122.65131, y: -22.232674}
-      - {x: 122.54703, y: -32.007553}
-      - {x: 125.499825, y: -32.067158}
-      - {x: 125.25199, y: -27.708418}
-      - {x: 135.90071, y: -28.102715}
-      - {x: 135.3297, y: 32.420975}
-      - {x: 58.882233, y: 32.259644}
+    - - {x: -57.041946, y: 33.853767}
+      - {x: -56.402138, y: -26.466213}
+      - {x: -38.76883, y: -26.640127}
+      - {x: -37.60058, y: -32.38987}
+      - {x: -30.550585, y: -32.3474}
+      - {x: -30.28015, y: -6.436226}
+      - {x: -9.99085, y: -6.3100777}
+      - {x: -9.851179, y: -21.815475}
+      - {x: -4.3271084, y: -21.833744}
+      - {x: -4.410961, y: -8.248507}
+      - {x: 5.452183, y: -8.147415}
+      - {x: 9.189493, y: -2.3734741}
+      - {x: 19.018045, y: -2.3975449}
+      - {x: 22.444855, y: -8.32407}
+      - {x: 34.0639, y: -8.362892}
+      - {x: 34.22068, y: -16.345406}
+      - {x: 74.12704, y: -16.329693}
+      - {x: 74.20431, y: -26.338291}
+      - {x: 93.481186, y: -26.401344}
+      - {x: 93.39997, y: -22.236021}
+      - {x: 122.10718, y: -22.450327}
+      - {x: 122.116936, y: -32.371483}
+      - {x: 125.599075, y: -32.331833}
+      - {x: 125.78134, y: -28.436274}
+      - {x: 137.6211, y: -28.433558}
+      - {x: 137.57008, y: 33.756584}
+      - {x: 57.718956, y: 33.552177}
 --- !u!114 &2024174413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78905,7 +78866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -81999,7 +81960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
@@ -82441,7 +82402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stressToAdd: 1
-  rampUpTime: 6
+  rampUpTime: 2
   curStressRamp: 0
   activationDistance: 2
   deactivateDistance: 2.4
