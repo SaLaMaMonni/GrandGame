@@ -35,7 +35,7 @@ public class Waypoint : MonoBehaviour
     // Show name on waypoint. Regular icon was way too small and terrible.
     private void OnDrawGizmos()
     {
-        Handles.Label(transform.position + namePrintPosOffset, name);
+        //Handles.Label(transform.position + namePrintPosOffset, name);
     }
 
 

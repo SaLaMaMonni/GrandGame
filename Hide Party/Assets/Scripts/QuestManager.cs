@@ -61,7 +61,7 @@ public class QuestManager : MonoBehaviour
             if (quest.questId > 0)
             {
                 int id = quest.questId;
-                Debug.Log("Quest ID: " + id + " and quest list length: " + quests.Length + "and name: " + quest.name);
+                //Debug.Log("Quest ID: " + id + " and quest list length: " + quests.Length + "and name: " + quest.name);
 
                 quests[id] = quest;
 
@@ -78,14 +78,14 @@ public class QuestManager : MonoBehaviour
     void OpenFirstQuest()
     {
         quests[currentQuest].isQuestOpen = true;
-        Debug.Log("Quests in total: " + highestQuestNumber);
+        //Debug.Log("Quests in total: " + highestQuestNumber);
     }
 
     public void OpenNextQuest()
     {
         currentQuest++;
 
-        Debug.Log("Current quest: " + currentQuest);
+        //Debug.Log("Current quest: " + currentQuest);
 
         if (currentQuest <= highestQuestNumber)
         {

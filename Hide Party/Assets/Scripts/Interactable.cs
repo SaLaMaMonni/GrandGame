@@ -46,6 +46,12 @@ public class Interactable : MonoBehaviour
     {
         checkTimer = 0f;
         checkRadius = false;
+
+        if (pcController != null)
+        {
+            pcController.RemoveFocus();
+            pcController = null;
+        }
     }
     
     // Checks whether a player character is inside the radius or not and acts upon it
@@ -56,20 +62,21 @@ public class Interactable : MonoBehaviour
             interactionTransform = transform;
         }
 
-        RaycastHit2D hit = Physics2D.CircleCast(interactionTransform.position, radius, Vector2.zero);
+        RaycastHit2D hit = Physics2D.CircleCast(interactionTransform.position, radius, Vector2.zero, 1.5f, LayerMask.GetMask("Player"));
 
         if (hit)
         {
             //Debug.Log("I hit: " + hit.collider.gameObject.name);
             pcController = hit.collider.GetComponent<InteractionController>();
 
-            if (pcController != null)  // Was the hit caused by the player and if so, do stuff
+            if (pcController != null)  // Hit was caused by a player, do stuff
             {
                 textMesh.gameObject.SetActive(true);
                 canInteract = true;
 
                 // Gives the player a chance to interact with it
                 pcController.SetFocus(gameObject);
+                Debug.Log("Focus on: " + gameObject.name);
             }
             else
             {
@@ -77,7 +84,7 @@ public class Interactable : MonoBehaviour
                 canInteract = false;
             }
         }
-        else if (pcController != null)  // Checks if the ray isn't hitting the object anymore
+        else if (!hit && pcController != null)  // Checks if the ray isn't hitting the object anymore
         {
             textMesh.gameObject.SetActive(false);
             canInteract = false;
@@ -90,6 +97,12 @@ public class Interactable : MonoBehaviour
         {
             textMesh.gameObject.SetActive(false);
             canInteract = false;
+
+            if (pcController != null)
+            {
+                pcController.RemoveFocus();
+                pcController = null;
+            }
         }
 
     }

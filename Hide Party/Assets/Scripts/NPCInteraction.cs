@@ -9,7 +9,6 @@ public class NPCInteraction : Interactable
     private bool hasNeededItem = false;
 
     private Inventory inventory;
-    private DialogueTrigger dialogueTrigger;
     private DialogueTrigger[] dialogueTriggers;
 
     public bool canGiveItem = false;

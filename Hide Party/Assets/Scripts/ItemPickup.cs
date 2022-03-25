@@ -10,8 +10,6 @@ public class ItemPickup : Interactable
     // Called when player interacts with an item
     public override void Interact()
     {
-        base.Interact();
-
         PickUp();
     }
 
