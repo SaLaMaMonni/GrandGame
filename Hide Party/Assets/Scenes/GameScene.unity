@@ -47008,7 +47008,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f545cf9c9e53647b194bd9663161fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  universalStressSpeed: 3
+  universalStressSpeed: 2
   stressBarMask: {fileID: 1114700746}
   hasCurve: 1
   curve:
@@ -76179,7 +76179,8 @@ MonoBehaviour:
     sentences:
     - Oh, I think Matti went to look for that dog. He wanted to make sure you could
       find it too.
-    - I think he headed to the left part of this house. I hope you find him!
+    - I think he headed to the left when he left this room. Could you let me know
+      if you find him or the dog? Thanks!
 --- !u!114 &2004671991
 MonoBehaviour:
   m_ObjectHideFlags: 0

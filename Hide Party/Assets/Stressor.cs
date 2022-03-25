@@ -65,7 +65,7 @@ public class Stressor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (!active && collision.transform == player)
+        if (active && collision.transform == player)
         {
             playerLeft = true;
         }
